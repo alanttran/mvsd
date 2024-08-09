@@ -15,7 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
             <RouterLink class="nav-link active" to="/" aria-current="page" href="#">Home</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/events">Events & News</RouterLink>
+            <RouterLink class="nav-link" to="/events">Announcements</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink class="nav-link" to="/sisterhood">Sisterhood</RouterLink>
@@ -33,9 +33,103 @@ import { RouterLink, RouterView } from 'vue-router'
       </div>
     </div>
   </nav>
+
+  <!-- non bootstrap nav bar FIX  -->
+  <!-- <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/mvsd.svg" alt="Logo" width="80" height="80">
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item">            
+          <RouterLink class="nav-link active" to="/" aria-current="page" href="#">Home</RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link" to="/events">Events & News</RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link" to="/sisterhood">Sisterhood</RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link" to="/about">About</RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink class="nav-link" to="/impact">Impact</RouterLink>
+        </li>
+        <li class="nav-item">            
+          <RouterLink class="nav-link" to="/apply">Apply Now!</RouterLink>
+        </li>
+      </ul>
+    </div>
+  </nav> -->
+
   <main>
     <RouterView />
   </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="foot-row">
+        <div class="footer-logo">
+          <img src="./assets/mvsd.svg" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
+        </div>
+
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href='#'>pageant@sdtet.com</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+          </div>
+        </div>
+
+        <div class="foot-col">
+          <h4>Home</h4>
+          <ul>
+            <li><a href='#'></a></li>
+          </ul>
+        </div>
+  
+        <div class="foot-col">
+          <h4>Announcements</h4>
+          <ul>
+            <li><a href='#'>Social Feed</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-col">
+          <h4>Sisterhood</h4>
+          <ul>
+            <li><a href='#'>Royal Court</a></li>
+            <li><a href='#'>FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href='#'>Sponsors</a></li>
+            <li><a href='#'>Staff</a></li>
+            <li><a href='#'>Tet Festival</a></li>
+          </ul>
+        </div>
+
+        <div class="foot-col">
+          <h4>Impact</h4>
+          <ul>
+            <li><a href='#'>Testimonials</a></li>
+            <li><a href='#'>Staff</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+</footer>
 
 
 </template>
@@ -44,207 +138,123 @@ import { RouterLink, RouterView } from 'vue-router'
 export default {
   name: 'VerticalSplit',
 }
+
 </script>
 
 <style>
 /* landing page */
-.landing-container {
-  display: flex;
-  height: 90vh;
-  background-color: rgb(235, 228, 235);
-  /* background-image: url('https://cc-prod.scene7.com/is/image/CCProdAuthor/What-is-Stock-Photography_P1_mobile?$pjpeg$&jpegSize=200&wid=720'); add mvsd img  */
-  /* background-sçize: cover; */
-  /* background-position: center; */
-  position: relative;
-}
-
-.text-panel {
-  flex: 1;
-}
-
-.overlay {
-  padding-top: 25%;
-  padding-left: 15%;
-  max-width: 75%;
-  color: black;
-  text-align: left;
-}
-
-.img-panel {
-  flex: 1;
-}
-
-/* Landing Image Panel CSS */
-#landing-img {
-  flex: 1;
-  align-items: center;
-  background-color: antiquewhite;
-}
-
-#landing-img .info-right img {
-  width: 80%;
-  height: auto;
-}
 
 
-/* more info section  */
-.info-container {
-  display: flex;
-  height: 60vh;
-  flex-direction: row;
-}
-
-/* #infoPanel-text{
-  background-color: rgb(160, 94, 157);
-}
-
-#infoPanel-img{
-  background-color: rgb(111, 94, 160);
-} */
-
-.text {
-  position: relative;
-  max-width: 75%;
-  text-align: left;
-  padding: 20px;
-}
-
-#info-text {
-  top: 10%;
-  left: 5%;
-}
-
-.info-right {
+/* about  */
+.about-container{
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.info-right img {
-  width: auto;
-  height: 80%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* royal court  */
-.royalCourt-container {
-  display: flex;
-  height: 60vh;
-  flex-direction: row;
-}
-
-#court-text {
-  top: 10%;
-  left: 5%;
-}
-
-/* announcements css  */
-.announcement-header {
-  display: flex;
+  text-align: left;
   justify-content: space-between;
-  padding-left: 8%;
-  padding-right: 8%;
-  /*fix spacing */
+  margin-top: 30px;
 }
-
-.announcements {
-  display: flex;
-  justify-content: center;
+#about-section{
+  padding-left: 5%;
+  padding-right: 3%;
 }
-
-.card {
-  background-color: #FFF8FD;
-  border: 2px solid #8E3B7C;
-  width: 348px;
-  height: 446px;
-  margin: 10px;
-  text-align: left;
-  border-radius: 20px;
+.text-right h2{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 40px;
 }
-
-.card-img {
-  height: 215px;
-  /* border-radius: 15px; */
-  /* width: 324px; */
-  margin-bottom: 15px;
-  background-size: cover;
-  border-radius: 17px;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
-}
-
-.card-1 {
-  background-image: url('https://cc-prod.scene7.com/is/image/CCProdAuthor/What-is-Stock-Photography_P1_mobile?$pjpeg$&jpegSize=200&wid=720');
-}
-
-.hr-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.hr-wrapper hr {
-  border: none;
-  border-top: 2px solid #8E3B7C;
-  opacity: 1;
-  /* border-color: #8E3B7C; */
-  width: 314px;
-  margin-top: 0;
-}
-
-.card h3 {
-  font-size: 26px;
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-.card p {
+.text-right p{
   font-size: 16px;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-bottom: 14px;
-  margin-bottom: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* royal court  */
+.royal-court{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.text-left{
+  margin-left: 8%;
+  margin-right: 8%;
+}
+.text-left h2{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 40px;
+}
+.text-left p{
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* apply now */
+#apply-now{
+  margin-right: 12%;
+  margin-left: 8%;
 }
 
-.calendar {
-  display: flex;
-  padding-left: 12px;
-  /* margin: 10px; */
+/* footer  */
+.footer-logo img {
+  width: 200px; 
+  height: auto; 
   align-items: center;
 }
-
-.calendar p {
-  margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+.footer{
+  background-color:rgb(226, 210, 217);
+  padding: 30px 40px;
+  
 }
-
-.author {
-  display: flex;
-  padding-left: 12px;
+.footer-container{
+  max-width: 1440px;
+  margin: auto;
+  text-align: left;
   align-items: center;
 }
-
-.author p {
+.footer ul{
+  list-style: none;
   margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
+}
+.footer li{
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+.foot-row{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.foot-col{
+  /* width: 25%; */
+  padding: 0 25px;
+}
+.footer-col h4{
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+.footer-col h4:hover{
+  color: #d72a7b;
+}
+.footer a {
+  text-decoration: none; 
+  color: inherit; 
+}
+.footer a:hover{
+  color: #d72a7b;
+}
+
+.social-links a {
+  margin-right: 12px; 
+  color: #DF6BA2; 
+  font-size: 1.5em; 
+}
+
+.social-links a:hover {
+  color: #d72a7b; 
 }
 
 
 
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-} */
 </style>
