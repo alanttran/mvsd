@@ -337,16 +337,14 @@ p{
   margin-bottom: 80px;
   padding-left: 5%;
   padding-right: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .announcements-cards{
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
-  justify-content: flex-start;
-  /* align-items: center; */
+  /* justify-content: flex-start; */
+  justify-content: center;
+  /* width: fit-content;
+  margin: 0 auto; */
 }
 .card {
   background-color: #FFF8FD;

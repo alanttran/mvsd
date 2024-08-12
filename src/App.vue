@@ -156,6 +156,15 @@ export default {
 #about-section{
   padding-left: 5%;
   padding-right: 3%;
+  flex: 50%;
+}
+.img-left{
+  flex: 50%;
+  width: 100%;
+}
+.text-right{
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .text-right h2{
   padding-top: 15px;
@@ -178,6 +187,13 @@ export default {
 .text-left{
   margin-left: 8%;
   margin-right: 8%;
+  flex: 50%;
+}
+.img-right{
+  flex: 50%;
+}
+.img-right img{
+width:100%;
 }
 .text-left h2{
   padding-top: 15px;

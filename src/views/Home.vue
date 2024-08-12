@@ -140,6 +140,36 @@ p{
   font-weight: 400;
   font-size: 16px;
 }
+/* about section  */
+.about-container{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+#about-section{
+  padding-left: 5%;
+  padding-right: 3%;
+  flex: 50%;
+}
+.img-left{
+  flex: 50%;
+}
+.img-left img{
+  width: 100%;
+}
+.text-right h2{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 40px;
+}
+.text-right p{
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* landing section  */
 .landing {
   position: relative; 
   width: 100%;        
@@ -167,6 +197,7 @@ p{
   justify-content: space-between;
   padding-left: 8%;
   padding-right: 8%;
+  align-items: center;
 }
 
 .announcements-cards{
