@@ -128,6 +128,11 @@
 </template>
 
 <style scoped>
+.text-left{
+  margin-left: 70px;
+  margin-right: 70px;
+  flex: 50%;
+}
 h1{
   font-weight: 700;
   font-size: 40px;

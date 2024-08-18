@@ -91,6 +91,112 @@
     </div>
   </div>
 
+   <!-- titles and awards -->
+   <div class="awards">
+    <h1 style="text-align: left;">
+      Titles and Awards
+    </h1>
+    <div class="hr-wrapper" id="full-line">
+        <hr>
+    </div>
+    <div class="award-img">
+      <img src="https://cc-prod.scene7.com/is/image/CCProdAuthor/What-is-Stock-Photography_P1_mobile?$pjpeg$&jpegSize=200&wid=720" alt="dog">
+    </div>
+    <h3 style="text-align: left;">Royal Court</h3>
+    <p style="text-align: left;">The Royal Court are the Miss Vietnam San Diego top contestants that are recognized for their grace, poise, and leadership. Comprised of Miss Vietnam of San Diego (Queen), First Princess, Second Princess, and the winners of the Special Awards, the Royal Court are the annually crowned titleholders of Miss Vietnam San Diego.</p>
+  </div>
+
+  <!-- 2024 contestants  -->
+  <section class="contestants">
+    <h1>2024 Contestants</h1>
+    <div class="contestants-hr-wrapper">
+      <hr>
+    </div>
+    <div class="royal-card">
+      <div class="profile">
+        <div class="profile-img">
+        </div>
+        <div class="profile-bio">
+          <h3>Kendra Quốc Ngọc Nguyễn</h3>
+          <p>UC San Diego Graduate</p>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-img">
+        </div>
+        <div class="profile-bio">
+          <h3>Jennifer Mỹ Nguyễn</h3>
+          <p>Mira Mesa High School</p>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-img">
+        </div>
+        <div class="profile-bio">
+          <h3>Claire Khánh Vi Nguyễn-Đỗ</h3>
+          <p>Mt. Carmel High School</p>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-img">
+        </div>
+        <div class="profile-bio">
+          <h3>Mia Thảo-Nguyên Trần</h3>
+          <p>Westview High School</p>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-img">
+        </div>
+        <div class="profile-bio">
+          <h3>Angelina Hồng Mai Phan</h3>
+          <p>UC San Diego</p>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-img">
+        </div>
+        <div class="profile-bio">
+          <h3>Xuân Hương Trần</h3>
+          <p>High Tech High Mesa</p>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-img">
+        </div>
+        <div class="profile-bio">
+          <h3>Katie Phạm</h3>
+          <p>UC Santa Barbara Graduate</p>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-img">
+        </div>
+        <div class="profile-bio">
+          <h3>Jacqueline Vũ</h3>
+          <p>Scripps Ranch High School</p>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-img">
+        </div>
+        <div class="profile-bio">
+          <h3>Gia-Hân Lê Ngô</h3>
+          <p>CSU San Marcos</p>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile-img">
+        </div>
+        <div class="profile-bio">
+          <h3>Vy Đoàn</h3>
+          <p>UC San Diego</p>
+        </div>
+      </div>
+    </div>
+
+   </section>
+
 </template>
 
 <style scoped>
@@ -187,4 +293,60 @@ ul{
   margin: 0;
 }
 
+/* title and awards  */
+.awards{
+  padding: 30px 70px 30px 70px;
+}
+.award-img img{
+  width: 716px;
+  height: 530px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+/* 2024 contestants  */
+.royal-card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contestants-hr-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.contestants-hr-wrapper hr {
+  border: none;
+  border-top: 1.5px solid #DF6BA2;
+  opacity: 1;
+  width: 324px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  /* margin-top: 15px; */
+}
+.profile{
+  width: 220px;
+  height: fit-content;
+  text-align: center;
+  margin: 25px;
+  display: flex; 
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center;
+
+}
+.profile-img{
+  width: 192px;
+  height: 192px;
+  border-radius: 50%; 
+  border: 2px solid #DF6BA2; 
+  overflow: hidden; 
+  opacity: 1; 
+  background-size: cover;
+  background-image: url('https://cc-prod.scene7.com/is/image/CCProdAuthor/What-is-Stock-Photography_P1_mobile?$pjpeg$&jpegSize=200&wid=720');  /* make seperate id for each pfp  */
+  background-position: center;
+}
+.profile-bio{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 </style>

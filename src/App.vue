@@ -185,8 +185,8 @@ export default {
   margin-top: 30px;
 }
 .text-left{
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 70px;
+  margin-right: 70px;
   flex: 50%;
 }
 .img-right{
