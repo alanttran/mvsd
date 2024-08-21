@@ -25,6 +25,7 @@
     <div class="text-left">
       <h1>Royal Court 2024</h1>
       <p>Presenting the Royal Court of Miss Vietnam San Diego.</p>
+      <p>Recognized for their exceptional grace, poise, and leadership skills, the Royal Court of Miss Vietnam San Diego proudly represents the Vietnamese American Youth Alliance and the Vietnamese community of San Diego. Crowned annually at the San Diego Tet Festival, our six titleholders embody the beauty and strength of an upheld cultural heritage.</p>
       <button class="primary-butt">Our Titleholders</button>
     </div>
     <div class="img-right">
@@ -41,8 +42,9 @@
     </div>
     <div class="text-right" id="apply-now">
       <h1>Apply Now</h1>
-      <p>Looking to join us next year? Fill out our interest form to stay connected!</p>
-      <button class="primary-butt">Interest Form</button>
+      <p>Miss Vietnam San Diego represents the beauty of the Vietnamese community in San Diego, beauty inside and out. Miss Vietnam San Diego is kind, intelligent, and proud of their heritage. Miss Vietnam San Diego always puts the community first.</p>
+      <p>Ready to show us if you’re Miss Vietnam San Diego? Apply now!</p>
+      <button class="primary-butt">2025 Application Form</button>
     </div>
   </div>
 
@@ -57,7 +59,7 @@
     <div class="card">
       <div class="card-img card-1">
       </div>
-      <h3>2025 Applications Open</h3>
+      <h3>2025 Interest Form Open</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
       <div class="hr-wrapper">
         <hr>
@@ -76,7 +78,7 @@
     <div class="card">
       <div class="card-img card-1">
       </div>
-      <h3>2025 Applications Open</h3>
+      <h3>New Community Project</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
       <div class="hr-wrapper">
         <hr>
@@ -94,7 +96,7 @@
     <div class="card">
       <div class="card-img card-1">
       </div>
-      <h3>2025 Applications Open</h3>
+      <h3>Introducing 2024 Royal Court</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
       <div class="hr-wrapper">
         <hr>
@@ -115,7 +117,7 @@
 <div class="royal-court">
     <div class="text-left" id="sponsors-text">
       <h1>Our Sponsors</h1>
-      <p>Thank you to our sponsors for the love given to our pageant girls through donating your time and resources. You represent beauty of community to empower and uplift. Without you, we wouldn’t be able to create the space to allow so many young girls become their most authentic, confidence selves.</p>
+      <p>Thank you to our sponsors for generously donating your time and resources to the finalists of Miss Vietnam San Diego 2024. The beauty of a community lies in our ability to uplift one another. Your contributions have empowered our Vietnamese youth to embrace their most confident and authentic selves.</p>
     </div>
     <div class="img-right">
       <img

@@ -9,12 +9,12 @@
   <!-- join sister hood  -->
   <div class="royal-court" id="join-sister">
     <div class="text-left">
-      <h1>Join the Sisterhood</h1>
+      <h1>Our Mission</h1>
       <div class="hr-wrapper" id="full-line">
         <hr>
       </div>
-      <p>Miss Vietnam San Diego represents the beauty of the Vietnamese community in San Diego, beauty inside and out. Miss Vietnam San Diego is kind, intelligent, and proud of their heritage. Miss Vietnam San Diego always puts the community first.</p>
-      <p>If Miss Vietnam San Diego is you, apply now!</p>
+      <p>Established in 2006 as part of The Vietnamese American Youth Alliance (VAYA), Miss Vietnam San Diego celebrates the beauty and cultural heritage of the Vietnamese community in San Diego.</p>
+      <p>Our mission is to unite and strengthen the community through women’s empowerment, leadership, and service. By providing a platform and mentorship for youth and goodwill ambassadors, we cultivate community role models and leaders</p>
     </div>
     <div class="img-right">
       <img
