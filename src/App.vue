@@ -218,7 +218,7 @@ width:100%;
   align-items: center;
 }
 .footer{
-  background-color:rgb(226, 210, 217);
+  background-color:rgb(154, 136, 144);
   padding: 30px 40px;
   
 }
