@@ -1,202 +1,153 @@
 <template>
   <!-- landing section  -->
-  
+
   <div class="landing">
-    <div class="landing-text">
-      <h1>Miss Vietnam San Diego</h1>
+    <div class="landing-text fancy-underline">
+      <h1>Miss Vietnam of San Diego</h1>
     </div>
   </div>
 
   <!-- about  -->
-  <div class="about-container">
+  <section class="section-container">
     <div class="img-left">
-      <img src="https://cc-prod.scene7.com/is/image/CCProdAuthor/What-is-Stock-Photography_P1_mobile?$pjpeg$&jpegSize=200&wid=720" alt="dog">
+      <img src="../assets/home-about.jpg" alt="dog">
     </div>
-    <div class="text-right" id="about-section">
-      <h1>About Miss Vietnam</h1>
-        <p>Established in 2006 as part of The Vietnamese American Youth Alliance (VAYA), Miss Vietnam San Diego celebrates the beauty and cultural heritage of the Vietnamese community in San Diego. Our mission is to unite and strengthen the community through women’s empowerment, leadership, and service. By providing a platform and mentorship for youth and goodwill ambassadors, we cultivate community role models and leaders.
-        </p>
-        <button class="primary-butt">About Us</button>
+    <div class="section-content" id="about-section">
+      <h2 class="fancy-underline">About Miss Vietnam of San Diego</h2>
+      <p>Established in 2006 as part of The Vietnamese American Youth Alliance (VAYA), Miss Vietnam San Diego celebrates
+        the beauty and cultural heritage of the Vietnamese community in San Diego. Our mission is to unite and
+        strengthen the community through women’s empowerment, leadership, and service. By providing a platform and
+        mentorship for youth and goodwill ambassadors, we cultivate community role models and leaders.
+      </p>
+      <button class="primary-butt">About Us</button>
     </div>
-  </div>
+  </section>
 
-  <!-- royal court  -->
-   <div class="royal-court">
-    <div class="text-left">
-      <h1>Royal Court 2024</h1>
+  <section class="section-container">
+    <div class="section-content">
+      <h2 class="fancy-underline">The Royal Court 2024</h2>
       <p>Presenting the Royal Court of Miss Vietnam San Diego.</p>
+      <p>Recognized for their exceptional grace, poise, and leadership skills, the Royal Court of Miss Vietnam San Diego
+        proudly represents the Vietnamese-American Youth Alliance and the Vietnamese community of San Diego. Crowned
+        annually at the San Diego Tet Festival, our titleholders embody the beauty and strength of an upheld cultural
+        heritage.</p>
       <button class="primary-butt">Our Titleholders</button>
     </div>
     <div class="img-right">
-      <img
-          src="https://cc-prod.scene7.com/is/image/CCProdAuthor/What-is-Stock-Photography_P1_mobile?$pjpeg$&jpegSize=200&wid=720"
-          alt="dog">
+      <img src="../assets/section-court.jpg" alt="dog">
     </div>
-   </div>
+  </section>
 
   <!-- apply now  -->
-  <div class="about-container">
+  <section class="section-container">
     <div class="img-left">
-      <img src="https://cc-prod.scene7.com/is/image/CCProdAuthor/What-is-Stock-Photography_P1_mobile?$pjpeg$&jpegSize=200&wid=720" alt="dog">
+      <img src="../assets/section-apply-now.jpg" alt="dog">
     </div>
-    <div class="text-right" id="apply-now">
-      <h1>Apply Now</h1>
+    <div class="section-content" id="apply-now">
+      <h2 class="fancy-underline">Apply Now</h2>
       <p>Looking to join us next year? Fill out our interest form to stay connected!</p>
-      <button class="primary-butt">Interest Form</button>
+      <button class="primary-butt">2025 Application Form</button>
     </div>
-  </div>
+  </section>
 
-  <!-- announcements section  -->
-  <section class="announcements-section">
-  <div class="announcement-header">
-    <h1>Announcements</h1>
-    <button class="secondary-butt">See More</button>
-  </div>
-  <div class="announcements-cards">
-    <!-- announcement 1 -->
-    <div class="card">
-      <div class="card-img card-1">
-      </div>
-      <h3>2025 Applications Open</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      <div class="hr-wrapper">
-        <hr>
-      </div>
-      <div class="calendar">
-        <i class="fa-solid fa-calendar-days fa-xl"></i>
-        <p>July 29th, 2024 at 1:15PM</p>
-      </div>
-      <!-- <br> -->
-      <div class="author">
-        <i class="fa-regular fa-user fa-xl"></i>
-        <p>Miss Vietnam San Diego</p>
-      </div>
-    </div>
-    <!-- announcement 2 -->
-    <div class="card">
-      <div class="card-img card-1">
-      </div>
-      <h3>2025 Applications Open</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      <div class="hr-wrapper">
-        <hr>
-      </div>
-      <div class="calendar">
-        <i class="fa-solid fa-calendar-days fa-xl"></i>
-        <p>July 29th, 2024 at 1:15PM</p>
-      </div>
-      <div class="author">
-        <i class="fa-regular fa-user fa-xl"></i>
-        <p>Miss Vietnam San Diego</p>
-      </div>
-    </div>
-    <!-- announcement 3  -->
-    <div class="card">
-      <div class="card-img card-1">
-      </div>
-      <h3>2025 Applications Open</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      <div class="hr-wrapper">
-        <hr>
-      </div>
-      <div class="calendar">
-        <i class="fa-solid fa-calendar-days fa-xl"></i>
-        <p>July 29th, 2024 at 1:15PM</p>
-      </div>
-      <div class="author">
-        <i class="fa-regular fa-user fa-xl"></i>
-        <p>Miss Vietnam San Diego</p>
-      </div>
-    </div>  
-  </div>
-</section>
-
-<!-- royal court  -->
-<div class="royal-court">
-    <div class="text-left" id="sponsors-text">
-      <h1>Our Sponsors</h1>
-      <p>Thank you to our sponsors for the love given to our pageant girls through donating your time and resources. You represent beauty of community to empower and uplift. Without you, we wouldn’t be able to create the space to allow so many young girls become their most authentic, confidence selves.</p>
+  <section class="section-container">
+    <div class="section-content">
+      <h2 class="fancy-underline">Our Sponsors</h2>
+      <p>Thank you to our sponsors for the love given to our pageant girls through donating your time and resources. You
+        represent beauty of community to empower and uplift. Without you, we wouldn’t be able to create the space to
+        allow so many young girls become their most authentic, confidence selves.</p>
     </div>
     <div class="img-right">
-      <img
-          src="https://cc-prod.scene7.com/is/image/CCProdAuthor/What-is-Stock-Photography_P1_mobile?$pjpeg$&jpegSize=200&wid=720"
-          alt="dog">
+      <img src="../assets/section-sponsors.jpg" alt="dog">
     </div>
-   </div>
+  </section>
+
+  <section class="sponsor-list">
+    <img src="../assets/sponsor-forever-beaumore.svg" alt="Forever Beaumore">
+    <img src="../assets/sponsor-emily-thao-photog.png" alt="Emily Thao Photography">
+    <img src="../assets/sponsor-gina-mai-hair.svg" alt="Gina Mai Hair">
+    <img src="../assets/sponsor-JP-charming-beauty.svg" alt="Charming Beauty Jennifer Pham">
+    <img src="../assets/sponsor-S-logo.svg" alt="S-logo">
+    <img src="../assets/sponsor-thuy-lam.svg" alt="Thuy Lam Makeup">
+  </section>
 
 
 </template>
 
 <style scoped>
-.text-left{
+.sponsor-list {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4em;
+  flex-wrap: wrap;
+}
+
+.text-left {
   margin-left: 70px;
   margin-right: 70px;
   flex: 50%;
 }
-h1{
-  font-weight: 700;
-  font-size: 40px;
-}
-h3{
-  font-weight: 600;
-  font-size: 26px;
-}
-p{
-  font-weight: 400;
-  font-size: 16px;
-}
+
 /* about section  */
-.about-container{
+.section-container {
   display: flex;
-  align-items: center;
-  text-align: left;
   justify-content: space-between;
   margin-top: 30px;
+
+  .img-left,
+  .img-right {
+    flex: 50%;
+  }
+
+  img {
+    width: 100%;
+  }
 }
-#about-section{
-  padding-left: 5%;
-  padding-right: 3%;
+
+
+.img-left {
   flex: 50%;
 }
-.img-left{
-  flex: 50%;
-}
-.img-left img{
+
+.img-left img {
   width: 100%;
 }
-.text-right h2{
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 40px;
+
+
+.section-content {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  flex: 50%;
 }
-.text-right p{
-  font-size: 16px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
+
+
 /* landing section  */
 .landing {
-  position: relative; 
-  width: 100%;        
-  height: 90vh;    
-  background-image: url('https://cc-prod.scene7.com/is/image/CCProdAuthor/What-is-Stock-Photography_P1_mobile?$pjpeg$&jpegSize=200&wid=720');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;
-  display: flex;      
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: black url('../assets/banner.jpg') right top no-repeat;
+  display: flex;
+  align-items: center;
 }
 
 .landing-text {
   color: #FAF9F8;
-  background-color: transparent;
-  margin-top: 400px;
   margin-left: 120px;
 }
 
-.announcements-section{
+.fancy-underline {
+  line-height: 2.8;
+  background: url('../assets/fancy-underline.svg') bottom no-repeat;
+  background-size: 100%;
+}
+
+.announcements-section {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
 .announcement-header {
   display: flex;
   justify-content: space-between;
@@ -205,11 +156,12 @@ p{
   align-items: center;
 }
 
-.announcements-cards{
+.announcements-cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .card {
   background-color: #FFF8FD;
   border: 2px solid #DF6BA2;
@@ -220,9 +172,11 @@ p{
   border-radius: 20px;
 
 }
-.card:hover{
+
+.card:hover {
   background-color: #eec3d7;
 }
+
 .card-img {
   height: 222px;
   width: 382px;
@@ -232,6 +186,7 @@ p{
   border-radius: 10px;
   margin: 15px;
 }
+
 .card-1 {
   background-image: url('https://cc-prod.scene7.com/is/image/CCProdAuthor/What-is-Stock-Photography_P1_mobile?$pjpeg$&jpegSize=200&wid=720');
 }
@@ -287,5 +242,4 @@ p{
   padding-top: 0;
   padding-bottom: 0;
 }
-
 </style>

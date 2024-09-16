@@ -3,49 +3,17 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <!-- navbar  -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="./assets/mvsd.svg" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
+  <div class="container">
+    <nav class="navbar">
+      <a class="navbar-logo" href="/">
+        <img src="./assets/mvsd.svg" style="height: 100px" alt="">
       </a>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <RouterLink class="nav-link active" to="/" aria-current="page" href="#">Home</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/events">Announcements</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/sisterhood">Sisterhood</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/about">About</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/impact">Impact</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/apply">Apply Now!</RouterLink>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- non bootstrap nav bar FIX  -->
-  <!-- <nav class="navbar">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="./assets/mvsd.svg" alt="Logo" width="80" height="80">
-      </a>
-      <ul class="navbar-nav">
-        <li class="nav-item">            
-          <RouterLink class="nav-link active" to="/" aria-current="page" href="#">Home</RouterLink>
+      <ul class="navbar-pages">
+        <li class="nav-item">
+          <RouterLink class="nav-link" to="/" aria-current="page" href="#">Home</RouterLink>
         </li>
         <li class="nav-item">
-          <RouterLink class="nav-link" to="/events">Events & News</RouterLink>
+          <RouterLink class="nav-link" to="/events">Announcements</RouterLink>
         </li>
         <li class="nav-item">
           <RouterLink class="nav-link" to="/sisterhood">Sisterhood</RouterLink>
@@ -56,21 +24,19 @@ import { RouterLink, RouterView } from 'vue-router'
         <li class="nav-item">
           <RouterLink class="nav-link" to="/impact">Impact</RouterLink>
         </li>
-        <li class="nav-item">            
+        <li class="nav-item">
           <RouterLink class="nav-link" to="/apply">Apply Now!</RouterLink>
         </li>
       </ul>
-    </div>
-  </nav> -->
+    </nav>
 
-  <main>
-    <RouterView />
-  </main>
 
-  <footer class="footer">
-    <div class="footer-container">
+    <main>
+      <RouterView />
+    </main>
 
-      <div class="foot-row">
+    <footer class="footer">
+      <div class="footer-container">
         <div class="footer-logo">
           <img src="./assets/mvsd.svg" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
         </div>
@@ -84,17 +50,9 @@ import { RouterLink, RouterView } from 'vue-router'
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
-
           </div>
         </div>
 
-        <div class="foot-col">
-          <h4>Home</h4>
-          <ul>
-            <li><a href='#'></a></li>
-          </ul>
-        </div>
-  
         <div class="foot-col">
           <h4>Announcements</h4>
           <ul>
@@ -106,16 +64,18 @@ import { RouterLink, RouterView } from 'vue-router'
           <h4>Sisterhood</h4>
           <ul>
             <li><a href='#'>Royal Court</a></li>
-            <li><a href='#'>FAQ</a></li>
+            <li><a href='#'>Former Titleholders</a></li>
+            <li><a href='#'>Contestants</a></li>
           </ul>
         </div>
 
         <div class="foot-col">
           <h4>About</h4>
           <ul>
-            <li><a href='#'>Sponsors</a></li>
+            <li><a href='#'>Mission</a></li>
+            <li><a href='#'>History</a></li>
             <li><a href='#'>Staff</a></li>
-            <li><a href='#'>Tet Festival</a></li>
+            <li><a href='#'>Sponsors</a></li>
           </ul>
         </div>
 
@@ -123,14 +83,21 @@ import { RouterLink, RouterView } from 'vue-router'
           <h4>Impact</h4>
           <ul>
             <li><a href='#'>Testimonials</a></li>
-            <li><a href='#'>Staff</a></li>
+            <li><a href='#'>Project</a></li>
           </ul>
         </div>
-
+        <div class="foot-col">
+          <h4>Apply Now</h4>
+          <ul>
+            <li><a href='#'>Responsibilities</a></li>
+            <li><a href='#'>Requirements</a></li>
+            <li><a href='#'>Application</a></li>
+            <li><a href='#'>Titles & Rewards</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-</footer>
-
+    </footer>
+  </div>
 
 </template>
 
@@ -141,136 +108,60 @@ export default {
 
 </script>
 
-<style>
-/* landing page */
-
-
-/* about  */
-.about-container{
+<style scss scoped>
+.navbar {
   display: flex;
-  align-items: center;
-  text-align: left;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-#about-section{
-  padding-left: 5%;
-  padding-right: 3%;
-  flex: 50%;
-}
-.img-left{
-  flex: 50%;
-  width: 100%;
-}
-.text-right{
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.text-right h2{
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 40px;
-}
-.text-right p{
-  font-size: 16px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-/* royal court  */
-.royal-court{
-  display: flex;
-  align-items: center;
-  text-align: left;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-.text-left{
-  margin-left: 70px;
-  margin-right: 70px;
-  flex: 50%;
-}
-.img-right{
-  flex: 50%;
-}
-.img-right img{
-width:100%;
-}
-.text-left h2{
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 40px;
-}
-.text-left p{
-  font-size: 16px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-/* apply now */
-#apply-now{
-  margin-right: 12%;
-  margin-left: 8%;
-}
-
-/* footer  */
-.footer-logo img {
-  width: 200px; 
-  height: auto; 
-  align-items: center;
-}
-.footer{
-  background-color:rgb(154, 136, 144);
-  padding: 30px 40px;
-  
-}
-.footer-container{
-  max-width: 1440px;
-  margin: auto;
-  text-align: left;
-  align-items: center;
-}
-.footer ul{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.footer li{
-  padding-bottom: 10px;
-  font-size: 16px;
-}
-.foot-row{
-  display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
 }
-.foot-col{
-  /* width: 25%; */
-  padding: 0 25px;
-}
-.footer-col h4{
-  font-size: 26px;
-  margin-bottom: 5px;
-}
-.footer-col h4:hover{
-  color: #d72a7b;
-}
-.footer a {
-  text-decoration: none; 
-  color: inherit; 
-}
-.footer a:hover{
-  color: #d72a7b;
+
+.navbar-logo {
+  margin-left: 1rem;
 }
 
-.social-links a {
-  margin-right: 12px; 
-  color: #DF6BA2; 
-  font-size: 1.5em; 
+.navbar-pages {
+  display: flex;
+  width: 45%;
+  justify-content: space-evenly;
+  align-items: center;
+
+  li a {
+    text-decoration: none;
+    position: relative;
+    color: #363636;
+
+    &.router-link-active {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background: #DF6BA2;
+      }
+    }
+
+    &:hover {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background: #DF6BA2;
+      }
+    }
+  }
 }
 
-.social-links a:hover {
-  color: #d72a7b; 
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 0px;
+
+  .foot-col {
+    line-height: 1.5;
+  }
 }
-
-
-
 </style>
