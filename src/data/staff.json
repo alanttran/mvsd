@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Tiffany Luu",
+    "position": "Pageant Advisor",
+    "image": "tiffany.jpg",
+    "alt": "Tiffany Luu - Pageant Advisor"
+  },
+  {
+    "id": 2,
+    "name": "Vivian Nguyen-Do",
+    "position": "Pageant Director",
+    "image": "vivian.jpg",
+    "alt": "Vivian Nguyen-Do - Pageant Director"
+  },
+  {
+    "id": 3,
+    "name": "Caroline Do",
+    "position": "Executive Assistant",
+    "image": "caroline.jpg",
+    "alt": "Caroline Do - Executive Assistant"
+  },
+  {
+    "id": 4,
+    "name": "Cathy Chau",
+    "position": "Judge's Chair",
+    "image": "cathy.jpg",
+    "alt": "Cathy Chau - Judge's Chair"
+  },
+  {
+    "id": 5,
+    "name": "Alex Nguyen",
+    "position": "Dance Choreographer",
+    "image": "alex.jpg",
+    "alt": "Alex Nguyen - Dance Choreographer"
+  },
+  {
+    "id": 6,
+    "name": "Helen Nguyen",
+    "position": "Assistant Choreographer",
+    "image": "helen.jpg",
+    "alt": "Helen Nguyen - Assistant Choreographer"
+  },
+  {
+    "id": 7,
+    "name": "Vina Duprat",
+    "position": "Workshop Coordinator",
+    "image": "vina.jpg",
+    "alt": "Vina Duprat - Workshop Coordinator"
+  },
+  {
+    "id": 8,
+    "name": "Breana Nguyen",
+    "position": "Workshop Coordinator",
+    "image": "breana.jpg",
+    "alt": "Breana Nguyen - Workshop Coordinator"
+  },
+  {
+    "id": 9,
+    "name": "Alan Tran",
+    "position": "Competition Integrity",
+    "image": "alan.jpg",
+    "alt": "Alan Tran - Competition Integrity"
+  }
+]

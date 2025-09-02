@@ -1,0 +1,54 @@
+---
+description: only in the Vue3 MVSD Project
+alwaysApply: false
+---
+
+# 2-component-structure.mdc
+
+@always Vue.js
+
+## Vue Component Structure
+
+### Component Order
+
+The three main blocks of a Vue component must always be in the following order: `<template>`, `<script setup>`, and `<style>`.
+
+### Styling
+
+Use the `lang="scss"` and `scoped` attributes on the `<style>` tag.
+
+### Code Example
+
+All new components should follow this structure exactly.
+
+```vue
+<template>
+  <div class="mvsd-card">
+    <h1 class="mvsd-card__title">{{ title }}</h1>
+  </div>
+</template>
+
+<script setup>
+import { defineProps } from "vue";
+
+const props = defineProps({
+  title: {
+    type: String,
+    default: "Default Title",
+  },
+});
+</script>
+
+<style scoped lang="scss">
+@import "@/styles/variables.scss";
+
+.mvsd-card {
+  border: 1px solid $mvsd-color-border;
+  padding: $mvsd-spacing-md;
+
+  &__title {
+    color: $mvsd-color-text-dark;
+  }
+}
+</style>
+```

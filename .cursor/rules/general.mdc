@@ -1,0 +1,30 @@
+---
+description: In Vue3 Projects
+alwaysApply: false
+---
+
+# 1-general.mdc
+
+## General Rules
+
+- **Framework:** Vue 3
+- **Language:** JavaScript
+- **Component API:** Composition API with `<script setup>`
+- **Styling:** Custom SCSS
+- **State Management:** Pinia
+- **Development Practices:** When suggesting a solution for a development task (e.g., image compression, SVG optimization, code minification), check if a corresponding **Vite plugin** exists. If it does, mention it by its package name and briefly explain its purpose.
+
+## Naming Conventions
+
+- **Components:** `PascalCase` (`e.g., ButtonPrimary.vue`)
+- **Composables:** `camelCase` starting with `use` (`e.g., useAuth.js`)
+- **Pinia Stores:** `camelCase` starting with `use` (`e.g., useUserStore.js`)
+- **Directories:** `kebab-case` (`e.g., components/user-profile`)
+- **CSS Class Names:** All class names in the template must be prefixed with `mvsd-` (e.g., `mvsd-button-primary`).
+- **SCSS Variables:** All variables must be prefixed with `$mvsd-` (e.g., `$mvsd-color-primary`).
+
+## Architectural Patterns
+
+- **Composables:** Place reusable reactive logic in the `composables/` directory.
+- **API Calls:** Use composables for all data fetching logic. Do not make API calls directly inside components.
+- **Lazy Loading:** Use dynamic imports for lazy-loading routes to improve performance.

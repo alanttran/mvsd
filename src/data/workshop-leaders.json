@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Nguyen",
+    "position": "Media and Interviews",
+    "image": "alex.jpg",
+    "alt": "Alex Nguyen - Media and Interviews"
+  },
+  {
+    "id": 2,
+    "name": "Grace Bagunu",
+    "position": "Self Reflection and Journaling",
+    "image": "grace.png",
+    "alt": "Grace - Self Reflection and Journaling"
+  },
+  {
+    "id": 3,
+    "name": "Jennifer Pham",
+    "position": "Posing and Self Confidence",
+    "image": "jennifer-pham.png",
+    "alt": "Jennifer Pham - Posing and Self Confidence"
+  },
+  {
+    "id": 4,
+    "name": "MyMy",
+    "position": "Public Speaking in the Vietnamese Community",
+    "image": "mymy.png",
+    "alt": "MyMy - Public Speaking in the Vietnamese Community"
+  },
+  {
+    "id": 5,
+    "name": "Yvon",
+    "position": "Runway Walking",
+    "image": "yvon.png",
+    "alt": "Yvon - Runway Walking"
+  }
+]

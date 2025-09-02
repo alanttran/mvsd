@@ -3,14 +3,14 @@
 
   <div class="landing">
     <div class="landing-text fancy-underline">
-      <h1>Miss Vietnam of San Diego</h1>
+      <h1>Miss Vietnam of San Diego&trade;</h1>
     </div>
   </div>
 
   <!-- about  -->
-  <section class="section-container">
+  <section class="mvsd-section__container">
     <div class="img-left">
-      <img src="../assets/home-about.jpg" alt="dog">
+      <img src="../assets/home-about.jpg" alt="About Miss Vietnam of San Diego" loading="eager" />
     </div>
     <div class="section-content" id="about-section">
       <h2 class="fancy-underline">About Miss Vietnam of San Diego</h2>
@@ -19,38 +19,38 @@
         strengthen the community through women’s empowerment, leadership, and service. By providing a platform and
         mentorship for youth and goodwill ambassadors, we cultivate community role models and leaders.
       </p>
-      <button class="primary-butt">About Us</button>
+      <button class="mvsd-button--primary">About Us</button>
     </div>
   </section>
 
-  <section class="section-container">
+  <section class="mvsd-section__container">
     <div class="section-content">
-      <h2 class="fancy-underline">The Royal Court 2024</h2>
+      <h2 class="fancy-underline">The Royal Court 2025</h2>
       <p>Presenting the Royal Court of Miss Vietnam San Diego.</p>
       <p>Recognized for their exceptional grace, poise, and leadership skills, the Royal Court of Miss Vietnam San Diego
         proudly represents the Vietnamese-American Youth Alliance and the Vietnamese community of San Diego. Crowned
         annually at the San Diego Tet Festival, our titleholders embody the beauty and strength of an upheld cultural
         heritage.</p>
-      <button class="primary-butt">Our Titleholders</button>
+      <button class="mvsd-button--primary">Our Titleholders</button>
     </div>
     <div class="img-right">
-      <img src="../assets/section-court.jpg" alt="dog">
+      <img src="../assets/section-court.jpg" alt="Royal Court 2025" loading="lazy" />
     </div>
   </section>
 
   <!-- apply now  -->
-  <section class="section-container">
+  <section class="mvsd-section__container">
     <div class="img-left">
-      <img src="../assets/section-apply-now.jpg" alt="dog">
+      <img src="../assets/section-apply-now.jpg" alt="Apply Now" loading="lazy" />
     </div>
     <div class="section-content" id="apply-now">
       <h2 class="fancy-underline">Apply Now</h2>
       <p>Looking to join us next year? Fill out our interest form to stay connected!</p>
-      <button class="primary-butt">2025 Application Form</button>
+      <button class="mvsd-button--primary">2025 Application Form</button>
     </div>
   </section>
 
-  <section class="section-container">
+  <section class="mvsd-section__container">
     <div class="section-content">
       <h2 class="fancy-underline">Our Sponsors</h2>
       <p>Thank you to our sponsors for the love given to our pageant girls through donating your time and resources. You
@@ -74,7 +74,13 @@
 
 </template>
 
-<style scoped>
+<script setup>
+// Standard Vue component - no custom imports needed
+</script>
+
+<style scoped lang="scss">
+@use '../styles/variables' as *;
+
 .sponsor-list {
   padding: 50px 0;
   display: flex;
@@ -90,7 +96,7 @@
 }
 
 /* about section  */
-.section-container {
+.mvsd-section__container {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
@@ -128,6 +134,7 @@
   width: 100%;
   height: 450px;
   background: black url('../assets/banner.jpg') right top no-repeat;
+  background-size: auto 100%;
   display: flex;
   align-items: center;
 }
@@ -164,7 +171,7 @@
 
 .card {
   background-color: #FFF8FD;
-  border: 2px solid #DF6BA2;
+  border: 2px solid $mvsd-colors-primary;
   width: 412px;
   height: 445px;
   margin: 10px;
@@ -198,9 +205,9 @@
 
 .hr-wrapper hr {
   border: none;
-  border-top: 1.5px solid #DF6BA2;
+  border-top: 1.5px solid $mvsd-colors-primary;
   opacity: 1;
-  /* border-color: #8E3B7C; */
+  /* border-color: $mvsd-colors-primary-dark; */
   width: 382px;
   margin-top: 0;
 }
@@ -241,5 +248,9 @@
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.sponsor-list {
+  background-color: #faf9f8;
 }
 </style>

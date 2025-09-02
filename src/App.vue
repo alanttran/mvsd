@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="container">
+  <div class="mvsd-container">
     <nav class="navbar">
       <a class="navbar-logo" href="/">
         <img src="./assets/mvsd.svg" style="height: 100px" alt="">
@@ -36,9 +36,9 @@ import { RouterLink, RouterView } from 'vue-router'
     </main>
 
     <footer class="footer">
-      <div class="footer-container">
+      <div class="mvsd-footer__container">
         <div class="footer-logo">
-          <img src="./assets/mvsd.svg" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
+          <img src="./assets/mvsd.svg" alt="Logo" height="120" class="d-inline-block align-text-top">
         </div>
 
         <div class="foot-col">
@@ -47,8 +47,10 @@ import { RouterLink, RouterView } from 'vue-router'
             <li><a href='#'>pageant@sdtet.com</a></li>
           </ul>
           <div class="social-links">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/missvietnamsandiego/" target="_blank"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/missvietnamsandiego" target="_blank"><i
+                class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
           </div>
         </div>
@@ -108,7 +110,9 @@ export default {
 
 </script>
 
-<style scss scoped>
+<style scoped lang="scss">
+@use './styles/variables' as *;
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -137,7 +141,7 @@ export default {
         bottom: -6px;
         width: 100%;
         height: 2px;
-        background: #DF6BA2;
+        background: $mvsd-colors-primary;
       }
     }
 
@@ -149,19 +153,44 @@ export default {
         bottom: -6px;
         width: 100%;
         height: 2px;
-        background: #DF6BA2;
+        background: $mvsd-colors-primary;
       }
     }
   }
 }
 
-.footer-container {
+.mvsd-footer__container {
   display: flex;
   justify-content: space-evenly;
   padding: 50px 0px;
+  background: #faf9f8;
 
-  .foot-col {
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    line-height: 2;
+  }
+
+  .social-links {
+    font-size: 24px;
+
+    a {
+      margin-right: 8px;
+    }
+
+  }
+
+  .foot-col a {
     line-height: 1.5;
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      color: $mvsd-colors-primary;
+      text-decoration: underline;
+    }
   }
 }
 </style>

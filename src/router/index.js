@@ -40,6 +40,11 @@ const router = createRouter({
       name: "apply",
       component: ApplyView,
     },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "home",
+      component: HomeView,
+    },
   ],
 });
 

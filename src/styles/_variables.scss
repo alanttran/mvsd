@@ -1,0 +1,47 @@
+// ============================================================================
+// SCSS Variables
+// ============================================================================
+
+// Colors
+$mvsd-colors-primary: #DF6BA2;
+$mvsd-colors-primary-dark: #8E3B7C;
+$mvsd-colors-primary-light: #DF6BA233;
+$mvsd-colors-background: #faf9f8;
+$mvsd-colors-text: #363636;
+$mvsd-colors-text-light: #213547;
+$mvsd-colors-white: #ffffff;
+$mvsd-colors-accent: #747bff;
+$mvsd-colors-button-hover: #f9f9f9;
+
+// Typography
+$mvsd-typography-font-family-primary: 'Instrument Sans', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$mvsd-typography-font-family-heading: "Playfair Display", Georgia, 'Times New Roman', serif;
+$mvsd-typography-font-size-base: 100%;
+$mvsd-typography-font-size-h1: 40px;
+$mvsd-typography-font-size-h2: 36px;
+$mvsd-typography-font-size-h3: 28px;
+$mvsd-typography-font-size-h4: 24px;
+$mvsd-typography-font-size-button: 16px;
+$mvsd-typography-font-weight-normal: 400;
+$mvsd-typography-font-weight-semibold: 600;
+$mvsd-typography-font-weight-bold: bold;
+$mvsd-typography-line-height: 1.5;
+
+// Spacing
+$mvsd-spacing-xs: 7px;
+$mvsd-spacing-sm: 8px;
+$mvsd-spacing-md: 16px;
+$mvsd-spacing-lg: 1em;
+
+// Layout
+$mvsd-layout-container-max-width: 1280px;
+$mvsd-layout-background-size: 600px;
+
+// Border radius
+$mvsd-border-radius: 10px;
+
+// Transitions
+$mvsd-transition-duration: 0.3s;
+
+// Focus
+$mvsd-focus-outline-width: 4px;
