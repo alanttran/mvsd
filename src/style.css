@@ -59,6 +59,8 @@ b {
   border-radius: 10px;
   font-weight: 400;
   font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .mvsd-button--primary:hover {

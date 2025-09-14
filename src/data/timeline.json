@@ -1,0 +1,243 @@
+[
+  {
+    "month": "January/February",
+    "events": [
+      {
+        "id": "feb-1",
+        "title": "Festival Appearance"
+      }
+    ]
+  },
+  {
+    "month": "March",
+    "events": [
+      {
+        "id": "mar-1",
+        "title": "Del Mar Fair Street Banner Shoot"
+      },
+      {
+        "id": "mar-2",
+        "title": "Royal Court Photoshoot"
+      },
+      {
+        "id": "mar-3",
+        "title": "Miss Poway Scholarship Pageant"
+      }
+    ]
+  },
+  {
+    "month": "April",
+    "events": [
+      {
+        "id": "apr-1",
+        "title": "San Diego Buddhist Community's Buddha's Birthday Celebration"
+      },
+      {
+        "id": "apr-2",
+        "title": "SDSU VSA VCN"
+      },
+      {
+        "id": "apr-3",
+        "title": "UCSD VSA VCN"
+      },
+      {
+        "id": "apr-4",
+        "title": "SDSU APSA's Fashion Talent Show"
+      },
+      {
+        "id": "apr-5",
+        "title": "Linda Vista Multicultural Fair & Parade"
+      },
+      {
+        "id": "apr-6",
+        "title": "Black April Remembrance"
+      }
+    ]
+  },
+  {
+    "month": "May",
+    "events": [
+      {
+        "id": "may-1",
+        "title": "Miss Escondido Scholarship Pageant"
+      },
+      {
+        "id": "may-2",
+        "title": "APAC Gala"
+      },
+      {
+        "id": "may-3",
+        "title": "Temple's 40th Anniversary & Buddha's Birthday Celebration"
+      },
+      {
+        "id": "may-4",
+        "title": "The Asian Pacific Cultural Festival"
+      },
+      {
+        "id": "may-5",
+        "title": "AAPI Unity Festival"
+      },
+      {
+        "id": "may-6",
+        "title": "Lac Hong End of the Year Celebration"
+      }
+    ]
+  },
+  {
+    "month": "June",
+    "events": [
+      {
+        "id": "jun-1",
+        "title": "Miss Rancho Bernardo"
+      },
+      {
+        "id": "jun-2",
+        "title": "Lao Food Festival"
+      }
+    ]
+  },
+  {
+    "month": "July",
+    "events": [
+      {
+        "id": "jul-1",
+        "title": "4th of July Parade"
+      }
+    ]
+  },
+  {
+    "month": "August",
+    "events": [
+      {
+        "id": "aug-1",
+        "title": "TAP-SD Taiwan Festival"
+      }
+    ]
+  },
+  {
+    "month": "September",
+    "events": [
+      {
+        "id": "sep-1",
+        "title": "Buddhism Parent's Day (Lễ Vũ Lan)"
+      },
+      {
+        "id": "sep-2",
+        "title": "CSUSM VSA GBM"
+      },
+      {
+        "id": "sep-4",
+        "title": "Poway Rotary Parade"
+      },
+      {
+        "id": "sep-5",
+        "title": "Next MVSD Virtual Kickoff"
+      },
+      {
+        "id": "sep-7",
+        "title": "SDSU VSA GBM"
+      },
+      {
+        "id": "sep-8",
+        "title": "HH Mid Autumn Moon Festival"
+      }
+    ]
+  },
+  {
+    "month": "October",
+    "events": [
+      {
+        "id": "oct-1",
+        "title": "UCSD VSA GBM"
+      },
+      {
+        "id": "oct-2",
+        "title": "Mira Mesa Street Fair"
+      },
+      {
+        "id": "oct-3",
+        "title": "ABA Gala"
+      },
+      {
+        "id": "oct-5",
+        "title": "Native American Heritage Festival Fashion Show"
+      },
+      {
+        "id": "oct-6",
+        "title": "Grand Ave Festival"
+      },
+      {
+        "id": "oct-7",
+        "title": "MVSD 2025 Orientation"
+      },
+      {
+        "id": "oct-8",
+        "title": "Lạc Hồng Halloween Carnival"
+      }
+    ]
+  },
+  {
+    "month": "November",
+    "events": [
+      {
+        "id": "nov-1",
+        "title": "Tet Fundraiser Banquet"
+      },
+      {
+        "id": "nov-2",
+        "title": "San Diego Asian Film Festival (SDAFF)"
+      },
+      {
+        "id": "nov-3",
+        "title": "Event with new MVSD contestants"
+      }
+    ]
+  },
+  {
+    "month": "December",
+    "events": [
+      {
+        "id": "dec-1",
+        "title": "Good Luck Prayer Ceremony for Tet Festival"
+      },
+      {
+        "id": "dec-2",
+        "title": "Event with new MVSD contestants"
+      }
+    ]
+  },
+  {
+    "month": "January",
+    "events": [
+      {
+        "id": "jan-1",
+        "title": "Pageant Crowning practice"
+      },
+      {
+        "id": "jan-2",
+        "title": "LNY City Council Proclamation"
+      },
+      {
+        "id": "jan-3",
+        "title": "LNY County Proclamation"
+      }
+    ]
+  },
+  {
+    "month": "February (Next Year)",
+    "events": [
+      {
+        "id": "feb-next-1",
+        "title": "Ao Dai Fashion Show"
+      },
+      {
+        "id": "feb-next-2",
+        "title": "Final Walk"
+      },
+      {
+        "id": "feb-next-3",
+        "title": "Tet Festival Mock Wedding"
+      }
+    ]
+  }
+]

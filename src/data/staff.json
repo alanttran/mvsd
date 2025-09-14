@@ -44,22 +44,36 @@
   {
     "id": 7,
     "name": "Vina Duprat",
-    "position": "Workshop Coordinator",
+    "position": "Workshop Chair",
     "image": "vina.jpg",
-    "alt": "Vina Duprat - Workshop Coordinator"
+    "alt": "Vina Duprat - Workshop Chair"
   },
   {
     "id": 8,
     "name": "Breana Nguyen",
-    "position": "Workshop Coordinator",
+    "position": "Workshop Chair",
     "image": "breana.jpg",
-    "alt": "Breana Nguyen - Workshop Coordinator"
+    "alt": "Breana Nguyen - Workshop Chair"
   },
   {
     "id": 9,
     "name": "Alan Tran",
-    "position": "Competition Integrity",
+    "position": "Website Development",
     "image": "alan.jpg",
-    "alt": "Alan Tran - Competition Integrity"
+    "alt": "Alan Tran - Website Development"
+  },
+  {
+    "id": 10,
+    "name": "Ellie Chen",
+    "position": "Media Chair",
+    "image": "ellie.jpg",
+    "alt": "Ellie Chen - Media Chair"
+  },
+  {
+    "id": 11,
+    "name": "Gia Ngo",
+    "position": "Royal Court Mentor",
+    "image": "gia.jpg",
+    "alt": "Gia Ngo - Royal Court Mentor"
   }
 ]

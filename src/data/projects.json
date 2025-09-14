@@ -1,0 +1,101 @@
+[
+  {
+    "year": "2015",
+    "title": "Viet4Cure",
+    "description": "The Miss Vietnam San Diego's Royal Court of 2015 launched the first-ever MVSD project with the launch of a free health screening and resource seminar targeting hepatitis B and C and breast cancer. This free event also featured Dr. Binh Tran as a keynote speaker.",
+    "image": "2015-viet-4-cure.jpg",
+    "sponsors": ["Asian Pacific Health Foundation", "Dr. Binh Tran"]
+  },
+  {
+    "year": "2017",
+    "title": "Project Homecoming",
+    "description": "Miss Vietnam San Diego 2017 partnered with the Special Education program of Mira Mesa High School to host a \"get ready\" experience for a select group of girls. A dedicated team of volunteers had committed to directing their individual talents toward making this a once-in-a-lifetime homecoming experience.",
+    "image": "2017-project-homecoming.jpg",
+    "sponsors": [
+      "Kim My Jewelery and Repair",
+      "Pho Duyen Mai",
+      "Wings n Things",
+      "Native Poppy",
+      "California Coast Credit Union",
+      "State Farm",
+      "San Diego Productions",
+      "Bellus Academy",
+      "June Nguyen",
+      "Eclipse Chocolate",
+      "Nume",
+      "Southern Sea Lion Dance",
+      "Austin Huynh Photography"
+    ]
+  },
+  {
+    "year": "2018",
+    "title": "Homeless Care Package Project",
+    "description": "The Miss Vietnam San Diego's Royal Court of 2018 fundraised and collected over $800 in donations to create over 200 care packages for the unhoused population of San Diego for the winter. Care packages were delivered to La Posada de Guadalupe Shelter and Nueva Vida Haven Emergency Shelter for Women and Children.",
+    "image": "2018-homeless-care-package.png",
+    "sponsors": [
+      "Sharetea Linda Vista",
+      "La Posada de Guadalupe Shelter",
+      "Nueva Vida Haven Emergency Shelter for Women and Children"
+    ]
+  },
+  {
+    "year": "2019",
+    "title": "Homeless Care Package Project",
+    "description": "The Miss Vietnam San Diego's Royal Court of 2019 fundraised and collected over $1,000 in donations to distribute 75 homeless care packages, 300 meals, and clothing items for the unhoused population of San Diego for the winter and lunar new year. Donations included 75 hygiene kits, 240 pairs of socks, 72 blankets, 516ct of feminine care products, 40 wet/baby wipes, and more! Care packages were delivered in downtown San Diego.",
+    "image": "2019-homeless-care-package.png",
+    "sponsors": ["Inter-Compassion Charities Inc"]
+  },
+  {
+    "year": "2020",
+    "title": "San Diego Food Bank Fundraiser",
+    "description": "Food insecurity affects too many every year, and especially given the new difficulties and challenges presented by COVID-19 in 2020, the resources provided by the San Diego Food Bank remain indispensable. With the help of donations from the community, Miss Vietnam San Diego's Royal Court of 2020 raised $525 for the San Diego Food Bank.",
+    "image": "2020-food-bank.png",
+    "sponsors": []
+  },
+  {
+    "year": "2021",
+    "title": "Communities-in-Action Fundraiser",
+    "description": "The Miss Vietnam San Diego's Royal Court of 2021 fundraised $169 for North County Lifeline's \"Communities in Action\", a program that aims to help low income individuals and families gain access to resources like Education and Cognitive Development classes and connections to employment and vocational programs.",
+    "image": "2021-communites-in-action.png",
+    "sponsors": []
+  },
+  {
+    "year": "2022",
+    "title": "Project Power with Periods & The Girls on a Mission Workshop",
+    "description": "The Miss Vietnam San Diego's Royal Court of 2022 partnered with UCSD's Mustard Seed Project to wrap up Project Power with Periods, where menstrual kits were directly distributed to the unhoused population of San Diego. After Project Power with Periods, the Royal Court of 2022 organized workshops with a focus on education, professional development, self-reflection, and self-care while providing a space for young women to experience inspiration, interaction, and empowerment.",
+    "image": "2022-project-power-with-periods.jpg",
+    "sponsors": ["UCSD Mustard Seed Project", "Lee's Sandwiches"]
+  },
+  {
+    "year": "2023",
+    "title": "Community Resource Fair",
+    "description": "The Miss Vietnam San Diego's Royal Court of 2023 hosted a large community resource fair with health tests, food, and drinks to give back and allow community members to get connected with helpful resources and opportunities. From education to healthcare, local businesses to nonprofits, the fair aims to provide a one-stop platform for fostering connections and support.",
+    "image": "2023-community-resource-fair.png",
+    "sponsors": [
+      "Sei Sushi",
+      "Gem Coffee",
+      "R&B Tea",
+      "Yerba Mate",
+      "APIDA CSUSM",
+      "Alpha Miracle Foundation",
+      "City Heights CDC",
+      "Schizophrenia Care Project"
+    ]
+  },
+  {
+    "year": "2024",
+    "title": "Project EMpower Skin Health",
+    "description": "The Miss Vietnam San Diego's Royal Court of 2024 fundraised over $1000 and distributed 270 skin health kits to San Diego's unhoused community with the help of Father Joe's Villages. Each kit was packed with essential skin health products that nourish both inside and out, including moisturizers, sunscreen, single-use wipes, and electrolyte packets.",
+    "image": "2024-project-empower.jpg",
+    "sponsors": [
+      "Majesty MedSpa",
+      "Skaja & Daniels, LLP",
+      "LMNT",
+      "Taste Salud",
+      "GEM Coffee",
+      "CSUSM Women & Gender Equity Center",
+      "Scripps Miramar Ranch Library",
+      "National University Rancho Bernardo Campus"
+    ]
+  }
+]

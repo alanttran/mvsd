@@ -1,8 +1,10 @@
 [
   {
     "id": 1,
-    "name": "Alex Nguyen",
+    "name": "Alexander Nguyen",
     "position": "Media and Interviews",
+    "career": "Multimedia Producer - KPBS",
+    "link": "https://www.kpbs.org/staff/alexander-nguyen/",
     "image": "alex.jpg",
     "alt": "Alex Nguyen - Media and Interviews"
   },
@@ -10,28 +12,36 @@
     "id": 2,
     "name": "Grace Bagunu",
     "position": "Self Reflection and Journaling",
+    "career": "Program Manager - City of San Diego",
+    "link": "https://gracebagunu.com/about/",
     "image": "grace.png",
     "alt": "Grace - Self Reflection and Journaling"
   },
   {
     "id": 3,
-    "name": "Jennifer Pham",
+    "name": "Jennifer Hang Pham",
     "position": "Posing and Self Confidence",
+    "career": "Owner of JP Charming Beauty",
+    "link": "https://www.jpcharmingbeauty.com/",
     "image": "jennifer-pham.png",
     "alt": "Jennifer Pham - Posing and Self Confidence"
   },
   {
     "id": 4,
-    "name": "MyMy",
+    "name": "MyMy Pham",
     "position": "Public Speaking in the Vietnamese Community",
+    "career": "Community Advocate",
+    "link": "https://mymypham.com",
     "image": "mymy.png",
     "alt": "MyMy - Public Speaking in the Vietnamese Community"
   },
   {
     "id": 5,
-    "name": "Yvon",
+    "name": "Yvon Nguyen",
     "position": "Runway Walking",
+    "career": "Founder of SoCal Model Co.",
+    "link": "https://www.socalmodelcompany.com/our-story",
     "image": "yvon.png",
-    "alt": "Yvon - Runway Walking"
+    "alt": "Yvon Nguyen - Runway Walking"
   }
 ]

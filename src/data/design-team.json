@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Cassie Dela Cruz",
+    "position": "Project Manager",
+    "image": "cassie.jpg",
+    "alt": "Cassie Dela Cruz - Project Manager",
+    "linkedin": "https://www.linkedin.com/in/cassiedelacruz6605/"
+  },
+  {
+    "id": 2,
+    "name": "Ann Chwu",
+    "position": "UI/UX Designer",
+    "image": "ann.jpg",
+    "alt": "Ann Chwu - UI/UX Designer",
+    "linkedin": "https://www.linkedin.com/in/ann-chwu-14a06a215/"
+  },
+  {
+    "id": 3,
+    "name": "Serina Li",
+    "position": "UI/UX Designer",
+    "image": "serina.jpg",
+    "alt": "Serina Li - UI/UX Designer",
+    "linkedin": "https://www.linkedin.com/in/serina-li-458504275/"
+  },
+  {
+    "id": 4,
+    "name": "Kristen Lee",
+    "position": "UX Researcher",
+    "image": "kristen.jpg",
+    "alt": "Kristen Lee - UX Researcher",
+    "linkedin": "https://www.linkedin.com/in/kristen-l-lee/"
+  },
+  {
+    "id": 5,
+    "name": "Jenna Bui",
+    "position": "Visual Designer",
+    "image": "jenna.jpg",
+    "alt": "Jenna Bui - Visual Designer",
+    "linkedin": "https://www.linkedin.com/in/jennapbui/"
+  },
+  {
+    "id": 6,
+    "name": "Kiko Pan",
+    "position": "Web Builder",
+    "image": "kiko.jpg",
+    "alt": "Kiko Pan - Web Builder",
+    "linkedin": "https://www.linkedin.com/in/kiko-pan/"
+  },
+  {
+    "id": 7,
+    "name": "Ellie Chen",
+    "position": "Content Strategist",
+    "image": "ellie.jpg",
+    "alt": "Ellie Chen - Content Strategist",
+    "linkedin": "https://www.linkedin.com/in/ellie-xinya/"
+  }
+]

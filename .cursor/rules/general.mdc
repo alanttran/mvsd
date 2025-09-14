@@ -28,3 +28,4 @@ alwaysApply: false
 - **Composables:** Place reusable reactive logic in the `composables/` directory.
 - **API Calls:** Use composables for all data fetching logic. Do not make API calls directly inside components.
 - **Lazy Loading:** Use dynamic imports for lazy-loading routes to improve performance.
+- **Image paths** Using Vite's proper dynamic import syntax with new URL() and import.meta.url

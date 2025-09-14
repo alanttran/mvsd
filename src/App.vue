@@ -1,5 +1,68 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { getPageHeadings } from './utils/pageHeadings.js'
+import externalLinks from './data/external-links.json'
+
+// Centralized navigation configuration
+const navigationLinks = [
+  { name: 'Home', path: '/', active: true },
+  { name: 'About', path: '/about', active: true },
+  { name: 'Announcements', path: '/events', active: false }, // Currently disabled
+  { name: 'Sisterhood', path: '/sisterhood', active: true },
+  { name: 'Impact', path: '/impact', active: true },
+  { name: 'Reign', path: '/reign', active: true },
+  { name: 'Apply Now!', path: '/apply', active: true }
+]
+
+// Filter active links for navbar
+const activeNavLinks = navigationLinks.filter(link => link.active)
+
+// Footer sections configuration with dynamic headings
+const footerSections = [
+  {
+    title: 'Contact',
+    links: [
+      { text: externalLinks.contact.email, href: `mailto:${externalLinks.contact.email}` }
+    ],
+    social: true,
+    active: true // Always show contact
+  },
+  {
+    title: 'Announcements',
+    links: [
+      { text: 'Social Feed', href: '#' }
+    ],
+    active: navigationLinks.find(link => link.name === 'Announcements')?.active || false
+  },
+  {
+    title: 'About',
+    links: getPageHeadings('/about'),
+    active: navigationLinks.find(link => link.name === 'About')?.active || false
+  },
+  {
+    title: 'Sisterhood',
+    links: getPageHeadings('/sisterhood'),
+    active: navigationLinks.find(link => link.name === 'Sisterhood')?.active || false
+  },
+  {
+    title: 'Impact',
+    links: getPageHeadings('/impact'),
+    active: navigationLinks.find(link => link.name === 'Impact')?.active || false
+  },
+  {
+    title: 'Reign',
+    links: getPageHeadings('/reign'),
+    active: navigationLinks.find(link => link.name === 'Reign')?.active || false
+  },
+  {
+    title: 'Apply Now',
+    links: getPageHeadings('/apply'),
+    active: navigationLinks.find(link => link.name === 'Apply Now!')?.active || false
+  }
+]
+
+// Filter active footer sections
+const activeFooterSections = footerSections.filter(section => section.active !== false)
 </script>
 
 <template>
@@ -9,23 +72,10 @@ import { RouterLink, RouterView } from 'vue-router'
         <img src="./assets/mvsd.svg" style="height: 100px" alt="">
       </a>
       <ul class="navbar-pages">
-        <li class="nav-item">
-          <RouterLink class="nav-link" to="/" aria-current="page" href="#">Home</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink class="nav-link" to="/events">Announcements</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink class="nav-link" to="/sisterhood">Sisterhood</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink class="nav-link" to="/about">About</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink class="nav-link" to="/impact">Impact</RouterLink>
-        </li>
-        <li class="nav-item">
-          <RouterLink class="nav-link" to="/apply">Apply Now!</RouterLink>
+        <li v-for="link in activeNavLinks" :key="link.name" class="nav-item">
+          <RouterLink class="nav-link" :to="link.path" :aria-current="link.name === 'Home' ? 'page' : undefined">
+            {{ link.name }}
+          </RouterLink>
         </li>
       </ul>
     </nav>
@@ -41,61 +91,19 @@ import { RouterLink, RouterView } from 'vue-router'
           <img src="./assets/mvsd.svg" alt="Logo" height="120" class="d-inline-block align-text-top">
         </div>
 
-        <div class="foot-col">
-          <h4>Contact</h4>
+        <div v-for="section in activeFooterSections" :key="section.title" class="foot-col">
+          <h4>{{ section.title }}</h4>
           <ul>
-            <li><a href='#'>pageant@sdtet.com</a></li>
+            <li v-for="link in section.links" :key="link.text">
+              <RouterLink v-if="link.href.startsWith('/')" :to="link.href">{{ link.text }}</RouterLink>
+              <a v-else :href="link.href">{{ link.text }}</a>
+            </li>
           </ul>
-          <div class="social-links">
-            <a href="https://www.instagram.com/missvietnamsandiego/" target="_blank"><i
-                class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/missvietnamsandiego" target="_blank"><i
-                class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <div v-if="section.social" class="social-links">
+            <a :href="externalLinks.socialMedia.instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a :href="externalLinks.socialMedia.facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a :href="externalLinks.socialMedia.youtube"><i class="fa-brands fa-youtube"></i></a>
           </div>
-        </div>
-
-        <div class="foot-col">
-          <h4>Announcements</h4>
-          <ul>
-            <li><a href='#'>Social Feed</a></li>
-          </ul>
-        </div>
-
-        <div class="foot-col">
-          <h4>Sisterhood</h4>
-          <ul>
-            <li><a href='#'>Royal Court</a></li>
-            <li><a href='#'>Former Titleholders</a></li>
-            <li><a href='#'>Contestants</a></li>
-          </ul>
-        </div>
-
-        <div class="foot-col">
-          <h4>About</h4>
-          <ul>
-            <li><a href='#'>Mission</a></li>
-            <li><a href='#'>History</a></li>
-            <li><a href='#'>Staff</a></li>
-            <li><a href='#'>Sponsors</a></li>
-          </ul>
-        </div>
-
-        <div class="foot-col">
-          <h4>Impact</h4>
-          <ul>
-            <li><a href='#'>Testimonials</a></li>
-            <li><a href='#'>Project</a></li>
-          </ul>
-        </div>
-        <div class="foot-col">
-          <h4>Apply Now</h4>
-          <ul>
-            <li><a href='#'>Responsibilities</a></li>
-            <li><a href='#'>Requirements</a></li>
-            <li><a href='#'>Application</a></li>
-            <li><a href='#'>Titles & Rewards</a></li>
-          </ul>
         </div>
       </div>
     </footer>

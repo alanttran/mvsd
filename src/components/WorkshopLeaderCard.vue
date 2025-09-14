@@ -6,6 +6,7 @@
     <div class="pageant-staff-name">
       <h3>{{ staffMember.name }}</h3>
       <div>{{ staffMember.position }}</div>
+      <a :href="staffMember.link" target="_blank" rel="noopener noreferrer">{{ staffMember.career }}</a>
     </div>
   </li>
 </template>
@@ -30,6 +31,8 @@ export default {
         return value &&
           typeof value.name === 'string' &&
           typeof value.position === 'string' &&
+          typeof value.career === 'string' &&
+          typeof value.link === 'string' &&
           typeof value.image === 'string' &&
           typeof value.alt === 'string';
       }
@@ -49,6 +52,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@use 'sass:color';
 @use '../styles/variables' as *;
 
 .workshop-leader-card {
@@ -64,6 +68,19 @@ export default {
       margin: 0.5rem 0;
       line-height: 1.5;
       border-bottom: 2px solid $mvsd-colors-primary;
+    }
+
+    a {
+      color: $mvsd-colors-primary;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      line-height: 1.5;
+
+      &:hover {
+        color: color.scale($mvsd-colors-primary, $lightness: -20%);
+        text-decoration: underline;
+      }
     }
   }
 }

@@ -1,11 +1,7 @@
 <template>
   <!-- landing section  -->
-
-  <div class="landing">
-    <div class="landing-text">
-      <h1>Program Details and Application</h1>
-    </div>
-  </div>
+  <PageBanner title="Program Details and Application" background-image="royal-courts/2024/contestants-apply-banner.jpg"
+    text-position="bottom" />
 
   <!-- about  -->
   <section class="mvsd-section__container">
@@ -16,11 +12,11 @@
       <h2 class="fancy-underline">Join the Sisterhood</h2>
       <p>Ready to show us if you're the future Miss Vietnam San Diego? Apply now!
       </p>
-      <button class="mvsd-button--primary">2026 Interest Form</button>
+      <a :href="applicationForm.url" target="_blank" class="mvsd-button--primary">{{ applicationForm.text }}</a>
     </div>
   </section>
 
-  <section class="mvsd-section__container">
+  <section class="mvsd-section__container" id="why-mvsd">
     <div class="section-content">
       <h2 class="fancy-underline">Why Miss Vietnam San Diego?</h2>
       <p>Miss Vietnam San Diego is more than a pageant or a competition—we are a sisterhood and a community. Joining the
@@ -59,7 +55,7 @@
     </div>
   </section>
 
-  <section class="mvsd-section__container">
+  <section class="mvsd-section__container" id="requirements">
     <div class="section-content">
       <h2 class="fancy-underline">Requirements</h2>
 
@@ -83,7 +79,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="titles-awards">
     <h2 class="fancy-underline-2">Titles and Awards</h2>
     <br /><br />
     <div style="text-align: center;"><img style=" width: 100%;" src="../assets/apply/apply-5.jpg" alt="dog"></img></div>
@@ -125,17 +121,30 @@
 
 </template>
 
+<script>
+import PageBanner from '../components/PageBanner.vue'
+import externalLinks from '../data/external-links.json'
+
+/**
+ * Apply page component displaying program details and application information
+ * @component
+ */
+export default {
+  name: 'Apply',
+  components: {
+    PageBanner
+  },
+  data() {
+    return {
+      applicationForm: externalLinks.applicationForm
+    }
+  }
+}
+</script>
+
 <style scoped lang="scss">
 @use '../styles/variables' as *;
 
-/* landing section  */
-.landing {
-  background:
-    linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100px),
-    black url('../assets/royal-courts/2024/contestants-apply-banner.jpg') no-repeat;
-  background-position: center 35%;
-  background-size: cover;
-}
 
 .sponsor-list {
   padding: 50px 0;

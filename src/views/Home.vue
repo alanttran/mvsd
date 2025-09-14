@@ -5,6 +5,10 @@
     <div class="landing-text fancy-underline">
       <h1>Miss Vietnam of San Diego&trade;</h1>
     </div>
+    <div>
+      <a :href="applicationForm.url" target="_blank" class="mvsd-button--primary landing-button">2026 Applications are
+        now open!</a>
+    </div>
   </div>
 
   <!-- about  -->
@@ -19,7 +23,7 @@
         strengthen the community through women’s empowerment, leadership, and service. By providing a platform and
         mentorship for youth and goodwill ambassadors, we cultivate community role models and leaders.
       </p>
-      <button class="mvsd-button--primary">About Us</button>
+      <RouterLink to="/about" class="mvsd-button--primary">About Us</RouterLink>
     </div>
   </section>
 
@@ -31,10 +35,10 @@
         proudly represents the Vietnamese-American Youth Alliance and the Vietnamese community of San Diego. Crowned
         annually at the San Diego Tet Festival, our titleholders embody the beauty and strength of an upheld cultural
         heritage.</p>
-      <button class="mvsd-button--primary">Our Titleholders</button>
+      <RouterLink to="/sisterhood" class="mvsd-button--primary">Our Titleholders</RouterLink>
     </div>
     <div class="img-right">
-      <img src="../assets/section-court.jpg" alt="Royal Court 2025" loading="lazy" />
+      <img src="../assets/banner-sisterhood.jpg" alt="Royal Court 2025" loading="lazy" />
     </div>
   </section>
 
@@ -46,7 +50,7 @@
     <div class="section-content" id="apply-now">
       <h2 class="fancy-underline">Apply Now</h2>
       <p>Looking to join us next year? Fill out our interest form to stay connected!</p>
-      <button class="mvsd-button--primary">2025 Application Form</button>
+      <a :href="applicationForm.url" target="_blank" class="mvsd-button--primary">{{ applicationForm.text }}</a>
     </div>
   </section>
 
@@ -75,7 +79,11 @@
 </template>
 
 <script setup>
-// Standard Vue component - no custom imports needed
+import { RouterLink } from 'vue-router'
+import externalLinks from '../data/external-links.json'
+
+// Get application form data
+const applicationForm = externalLinks.applicationForm
 </script>
 
 <style scoped lang="scss">
@@ -136,12 +144,28 @@
   background: black url('../assets/banner.jpg') right top no-repeat;
   background-size: auto 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+
+  .landing-button {
+    margin-left: 120px;
+  }
 }
 
 .landing-text {
   color: #FAF9F8;
   margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.landing-button {
+  margin-top: 20px;
+  align-self: flex-start;
+  font-size: 18px;
+  padding: 12px 24px;
 }
 
 .fancy-underline {

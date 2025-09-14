@@ -1,11 +1,6 @@
 <template>
   <!-- landing section  -->
-
-  <div class="landing">
-    <div class="landing-text ">
-      <h1>About Us</h1>
-    </div>
-  </div>
+  <PageBanner title="About Us" background-image="about/banner-about.jpg" text-position="bottom" />
 
   <!-- about  -->
   <section class="mvsd-section__container">
@@ -40,40 +35,25 @@
     </ul>
   </section>
 
-
-
-  <!-- apply now  -->
-  <section class="mvsd-section__container">
-    <div class="img-left">
-      <img src="../assets/section-apply-now.jpg" alt="dog">
-    </div>
-    <div class="section-content" id="apply-now">
-      <h2 class="fancy-underline">Apply Now</h2>
-      <p>Looking to join us next year? Fill out our interest form to stay connected!</p>
-      <button class="mvsd-button--primary">2025 Application Form</button>
-    </div>
+  <section id="design-team">
+    <h2 class="fancy-underline">Design Team</h2>
+    <br /><br />
+    <p></p>
+    <ul class="pageant-staff-list">
+      <DesignTeamCard v-for="designTeamMember in designTeamMembers" :key="designTeamMember.id"
+        :design-team-member="designTeamMember" />
+    </ul>
   </section>
-
-  <section class="mvsd-section__container">
-    <div class="section-content">
-      <h2 class="fancy-underline">Our Sponsors</h2>
-      <p>Thank you to our sponsors for the love given to our pageant girls through donating your time and resources. You
-        represent beauty of community to empower and uplift. Without you, we wouldn’t be able to create the space to
-        allow so many young girls become their most authentic, confidence selves.</p>
-    </div>
-    <div class="img-right">
-      <img src="../assets/section-sponsors.jpg" alt="dog">
-    </div>
-  </section>
-
-
 </template>
 
 <script>
+import PageBanner from '../components/PageBanner.vue'
 import StaffMemberCard from '../components/StaffMemberCard.vue'
 import WorkshopLeaderCard from '../components/WorkshopLeaderCard.vue'
+import DesignTeamCard from '../components/DesignTeamCard.vue'
 import staffData from '../data/staff.json'
 import workshopLeadersData from '../data/workshop-leaders.json'
+import designTeamData from '../data/design-team.json'
 
 /**
  * About page component displaying mission, staff, and application information
@@ -82,13 +62,16 @@ import workshopLeadersData from '../data/workshop-leaders.json'
 export default {
   name: 'About',
   components: {
+    PageBanner,
     StaffMemberCard,
-    WorkshopLeaderCard
+    WorkshopLeaderCard,
+    DesignTeamCard
   },
   data() {
     return {
       staffMembers: staffData,
-      workshopLeaders: workshopLeadersData
+      workshopLeaders: workshopLeadersData,
+      designTeamMembers: designTeamData
     }
   }
 }
@@ -131,7 +114,8 @@ export default {
 }
 
 #pageant-staff,
-#workshop-leaders {
+#workshop-leaders,
+#design-team {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -176,14 +160,6 @@ export default {
 }
 
 
-/* landing section  */
-.landing {
-  background:
-    linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100px),
-    black url('../assets/about/banner-about.jpg') no-repeat;
-  background-position: center 35%;
-  background-size: cover;
-}
 
 .announcements-section {
   margin-top: 30px;
