@@ -178,6 +178,7 @@ export default {
   justify-content: space-evenly;
   padding: 50px 0px;
   background: #faf9f8;
+  font-size: .8em;
 
   .footer-logo {
     margin-bottom: 20px;
@@ -185,6 +186,7 @@ export default {
 
   h4 {
     line-height: 2;
+    font-size: 1em;
   }
 
   .social-links {
@@ -196,15 +198,21 @@ export default {
 
   }
 
-  .foot-col a {
-    line-height: 1.5;
-    color: black;
-    text-decoration: none;
+  .foot-col {
+    flex: 1;
 
-    &:hover {
-      color: $mvsd-colors-primary;
-      text-decoration: underline;
+    a {
+      line-height: 1.5;
+      color: $mvsd-colors-text;
+      text-decoration: none;
+
+      &:hover {
+        color: $mvsd-colors-primary;
+        text-decoration: underline;
+      }
     }
+
+
   }
 }
 </style>

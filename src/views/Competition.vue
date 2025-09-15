@@ -65,51 +65,12 @@
 
   <!-- Practice Schedule Section -->
   <section class="practice-section" id="practice-schedule">
-    <h2 class="fancy-underline">Practice Schedule</h2>
+    <h2 class="fancy-underline">Proposed Practice Schedule</h2>
+    <p>This is a proposed schedule and is subject to change. Please check back for updates.</p>
     <div class="practice-timeline">
-      <div class="practice-phase">
-        <div class="phase-header">
-          <h3>Phase 1: Foundation Building</h3>
-          <span class="phase-duration">Weeks 1-4</span>
-        </div>
-        <div class="phase-content">
-          <ul>
-            <li>Introduction to pageant format and expectations</li>
-            <li>Basic walking and posture training</li>
-            <li>Cultural education and Vietnamese traditions</li>
-            <li>Community service project planning</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="practice-phase">
-        <div class="phase-header">
-          <h3>Phase 2: Skill Development</h3>
-          <span class="phase-duration">Weeks 5-8</span>
-        </div>
-        <div class="phase-content">
-          <ul>
-            <li>Advanced modeling and presentation techniques</li>
-            <li>Interview preparation and public speaking</li>
-            <li>Áo Dài fitting and cultural presentation</li>
-            <li>Evening gown selection and styling</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="practice-phase">
-        <div class="phase-header">
-          <h3>Phase 3: Final Preparation</h3>
-          <span class="phase-duration">Weeks 9-12</span>
-        </div>
-        <div class="phase-content">
-          <ul>
-            <li>Full dress rehearsals</li>
-            <li>Mock interviews and Q&A sessions</li>
-            <li>Final wardrobe fittings and styling</li>
-            <li>Community service project completion</li>
-          </ul>
-        </div>
+      <div v-for="session in practiceSchedule" :key="session.id" :class="['practice-session', session.type]">
+        <div class="session-date">{{ session.date }}</div>
+        <div class="session-activity">{{ session.activity }}</div>
       </div>
     </div>
   </section>
@@ -167,6 +128,7 @@
 <script>
 import PageBanner from '../components/PageBanner.vue'
 import judgesData from '../data/judges.json'
+import practiceSchedule from '../data/practice-schedule.json'
 
 /**
  * Competition page component displaying scoring breakdown, practice schedule, and judge information
@@ -179,7 +141,8 @@ export default {
   },
   data() {
     return {
-      judgesData: judgesData
+      judgesData: judgesData,
+      practiceSchedule: practiceSchedule
     }
   },
   methods: {
@@ -297,59 +260,44 @@ h2.fancy-underline {
 .practice-timeline {
   margin-top: 2rem;
   width: 100%;
+  max-width: 600px;
 }
 
-.practice-phase {
-  background: #faf9f8;
-  border-left: 4px solid #DF6BA2;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 0 8px 8px 0;
+.practice-session {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
   position: relative;
 }
 
-.practice-phase::before {
-  content: '';
-  position: absolute;
-  left: -8px;
-  top: 2rem;
-  width: 12px;
-  height: 12px;
-  background: #DF6BA2;
-  border-radius: 50%;
+.practice-session:last-child {
+  border-bottom: none;
 }
 
-.phase-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
 
-.phase-header h3 {
-  color: #DF6BA2;
-  font-size: 1.5rem;
+.session-date {
+  min-width: 80px;
   font-weight: 600;
-  margin: 0;
+  color: #DF6BA2;
+  font-size: 1rem;
+  margin-right: 1.5rem;
 }
 
-.phase-duration {
-  background: #DF6BA2;
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  font-weight: 500;
+.practice-session.no-practice .session-date {
+  color: #999;
 }
 
-.phase-content ul {
-  margin: 0;
-  padding-left: 1.5rem;
+.session-activity {
+  flex: 1;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
-.phase-content li {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+.practice-session.no-practice .session-activity {
+  color: #999;
+  font-style: italic;
 }
 
 /* Judge Criteria */
@@ -496,20 +444,21 @@ h2.fancy-underline {
     grid-template-columns: 1fr;
   }
 
-  .phase-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
   .category-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
 
-  .practice-phase {
-    padding: 1.5rem;
+  .practice-session {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .session-date {
+    min-width: auto;
+    margin-right: 0;
   }
 }
 </style>
