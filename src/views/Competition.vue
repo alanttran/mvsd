@@ -114,7 +114,8 @@
     <div class="judges-grid">
       <div v-for="judge in judgesData" :key="judge.id" class="judge-card">
         <div class="judge-avatar">
-          <span class="judge-initial">{{ getInitial(judge.name) }}</span>
+          <img v-if="judge.image" :src="getJudgeImage(judge.image)" :alt="judge.name" class="judge-photo" />
+          <span v-else class="judge-initial">{{ getInitial(judge.name) }}</span>
         </div>
         <div class="judge-info">
           <h3 class="judge-name">{{ judge.name }}</h3>
@@ -148,6 +149,9 @@ export default {
   methods: {
     getInitial(name) {
       return name.split(' ').map(n => n[0]).join('')
+    },
+    getJudgeImage(imageName) {
+      return new URL(`../assets/judges/${imageName}`, import.meta.url).href
     }
   }
 }
@@ -371,7 +375,7 @@ h2.fancy-underline {
 
 .judges-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-top: 2rem;
   width: 100%;
@@ -381,7 +385,7 @@ h2.fancy-underline {
   background: #faf9f8;
   border: 2px solid #DF6BA2;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.5rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
@@ -404,6 +408,14 @@ h2.fancy-underline {
   justify-content: center;
   margin-bottom: 1rem;
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.judge-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .judge-initial {

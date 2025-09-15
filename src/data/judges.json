@@ -7,17 +7,20 @@
   {
     "id": 2,
     "name": "Vicky Nga Pham",
-    "title": "Miss Vietnam San Diego 2014, MVSD Director 2016"
+    "title": "Miss Vietnam San Diego 2014, MVSD Director 2016",
+    "image": "vicky-pham.jpeg"
   },
   {
     "id": 3,
     "name": "An Thien Phan",
-    "title": "CEO & Founder for AAPI Artists for Mental Illness (AAMI), California State Queen 2024"
+    "title": "CEO & Founder for AAPI Artists for Mental Illness (AAMI), California State Queen 2024",
+    "image": "an-phan.jpg"
   },
   {
     "id": 4,
     "name": "Jasmine Hoang",
-    "title": "Miss Vietnam Ultimate Elite 2024"
+    "title": "Miss Vietnam Ultimate Elite 2024",
+    "image": "jasmine-hoang.jpg"
   },
   {
     "id": 5,
@@ -37,12 +40,14 @@
   {
     "id": 8,
     "name": "Christine Tran Nguyen",
-    "title": "Founder of MakeupbyChristtranx3"
+    "title": "Founder of MakeupbyChristtranx3",
+    "image": "christine-tran.jpeg"
   },
   {
     "id": 9,
     "name": "Huyen Pham",
-    "title": "Original VAYA founder, Early Childhood Development Supervisor"
+    "title": "Original VAYA founder, Early Childhood Development Supervisor",
+    "image": "huyen-pham.png"
   },
   {
     "id": 10,
@@ -52,7 +57,8 @@
   {
     "id": 11,
     "name": "Lanphi Nguyen",
-    "title": "MVSD Miss Congeniality 2012"
+    "title": "MVSD Miss Congeniality 2012",
+    "image": "lanphi-nguyen.jpg"
   },
   {
     "id": 12,
