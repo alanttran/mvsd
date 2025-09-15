@@ -33,6 +33,13 @@ const pageHeadings = {
     { text: "A Year of Service", href: "/reign#reign-intro" },
     { text: "Timeline of Events", href: "/reign#timeline" },
   ],
+  "/competition": [
+    { text: "Competition Details", href: "/competition#competition-intro" },
+    { text: "Scoring Breakdown", href: "/competition#scoring" },
+    { text: "Practice Schedule", href: "/competition#practice-schedule" },
+    { text: "Judge Criteria", href: "/competition#judge-criteria" },
+    { text: "Past Judges", href: "/competition#past-judges" },
+  ],
   "/apply": [
     { text: "Join the Sisterhood", href: "/apply#about-section" },
     { text: "Why Miss Vietnam San Diego?", href: "/apply#why-mvsd" },

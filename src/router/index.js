@@ -7,6 +7,7 @@ import AboutView from "../views/About.vue";
 import ImpactView from "../views/Impact.vue";
 import ApplyView from "../views/Apply.vue";
 import ReignView from "../views/Reign.vue";
+import CompetitionView from "../views/Competition.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +46,11 @@ const router = createRouter({
       path: "/reign",
       name: "reign",
       component: ReignView,
+    },
+    {
+      path: "/competition",
+      name: "competition",
+      component: CompetitionView,
     },
     {
       path: "/:pathMatch(.*)*",

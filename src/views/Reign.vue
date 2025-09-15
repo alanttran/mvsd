@@ -1,5 +1,5 @@
 <template>
-  <PageBanner title="Reign" background-image="banner-impact.jpg" :show-gradient="true" text-position="bottom" />
+  <PageBanner title="Reign" background-image="banner-reign.jpg" :show-gradient="true" text-position="bottom" />
 
   <section class="impact-title-section" id="reign-intro">
     <h2 class="fancy-underline">A Year of Service</h2>

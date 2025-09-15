@@ -9,6 +9,7 @@ const navigationLinks = [
   { name: 'About', path: '/about', active: true },
   { name: 'Announcements', path: '/events', active: false }, // Currently disabled
   { name: 'Sisterhood', path: '/sisterhood', active: true },
+  { name: 'Competition', path: '/competition', active: true },
   { name: 'Impact', path: '/impact', active: true },
   { name: 'Reign', path: '/reign', active: true },
   { name: 'Apply Now!', path: '/apply', active: true }
@@ -53,6 +54,11 @@ const footerSections = [
     title: 'Reign',
     links: getPageHeadings('/reign'),
     active: navigationLinks.find(link => link.name === 'Reign')?.active || false
+  },
+  {
+    title: 'Competition',
+    links: getPageHeadings('/competition'),
+    active: navigationLinks.find(link => link.name === 'Competition')?.active || false
   },
   {
     title: 'Apply Now',
