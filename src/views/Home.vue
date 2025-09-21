@@ -3,7 +3,7 @@
 
   <div class="landing">
     <div class="landing-text fancy-underline">
-      <h1>Miss Vietnam of San Diego&trade;</h1>
+      <h1>Miss Vietnam of San Diego</h1>
     </div>
     <div>
       <a :href="applicationForm.url" target="_blank" class="mvsd-button--primary landing-button">2026 Applications are
@@ -18,9 +18,10 @@
     </div>
     <div class="section-content" id="about-section">
       <h2 class="fancy-underline">About Miss Vietnam of San Diego</h2>
-      <p>Established in 2006 as part of The Vietnamese American Youth Alliance (VAYA), Miss Vietnam San Diego celebrates
+      <p class="intro-paragraph">Established in 2006 as part of The Vietnamese American Youth Alliance (VAYA), Miss
+        Vietnam San Diego celebrates
         the beauty and cultural heritage of the Vietnamese community in San Diego. Our mission is to unite and
-        strengthen the community through women’s empowerment, leadership, and service. By providing a platform and
+        strengthen the community through women's empowerment, leadership, and service. By providing a platform and
         mentorship for youth and goodwill ambassadors, we cultivate community role models and leaders.
       </p>
       <RouterLink to="/about" class="mvsd-button--primary">About Us</RouterLink>
@@ -30,7 +31,7 @@
   <section class="mvsd-section__container">
     <div class="section-content">
       <h2 class="fancy-underline">The Royal Court 2025</h2>
-      <p>Presenting the Royal Court of Miss Vietnam San Diego.</p>
+      <p class="intro-paragraph">Presenting the Royal Court of Miss Vietnam San Diego.</p>
       <p>Recognized for their exceptional grace, poise, and leadership skills, the Royal Court of Miss Vietnam San Diego
         proudly represents the Vietnamese-American Youth Alliance and the Vietnamese community of San Diego. Crowned
         annually at the San Diego Tet Festival, our titleholders embody the beauty and strength of an upheld cultural
@@ -42,23 +43,36 @@
     </div>
   </section>
 
-  <!-- apply now  -->
+  <!-- Project Sang  -->
   <section class="mvsd-section__container">
     <div class="img-left">
-      <img src="../assets/section-apply-now.jpg" alt="Apply Now" loading="lazy" />
+      <img :src="projectSangImage" alt="2025 Project Sang" loading="lazy" />
     </div>
-    <div class="section-content" id="apply-now">
-      <h2 class="fancy-underline">Apply Now</h2>
-      <p>Looking to join us next year? Fill out our interest form to stay connected!</p>
-      <a :href="applicationForm.url" target="_blank" class="mvsd-button--primary">{{ applicationForm.text }}</a>
+    <div class="section-content" id="project-sang">
+      <h2 class="fancy-underline">2025 Project Sang</h2>
+      <p class="intro-paragraph">Our current Royal Court is proud to present Project Sang, a comprehensive initiative
+        focused on empowering
+        children with autism through accessible STEAM education and community support.</p>
+      <p>Our mission is to empower children with autism by providing accessible and engaging STEAM (Science, Technology,
+        Engineering, Art, and Mathematics) resources. We believe that every child, regardless of background or ability,
+        deserves to feel seen, supported, and inspired to learn.</p>
+
+      <UpcomingEvent main-title="Reach for the Sky!" event-name="STEAM Workshop with Autism Tree"
+        event-description="Engineering fun with paper airplanes & towers" event-date="September 27, 2025"
+        event-time="1:00 PM - 3:00 PM" event-location="4747 Morena Blvd, Suite 355, San Diego, CA 92117"
+        registration-url="https://bit.ly/ATMVSDW1" registration-deadline="2025-09-26T23:59:00"
+        event-end-time="2025-09-27T15:00:00" />
+
+      <RouterLink to="/impact" class="mvsd-button--primary">Learn More</RouterLink>
     </div>
   </section>
 
   <section class="mvsd-section__container">
     <div class="section-content">
       <h2 class="fancy-underline">Our Sponsors</h2>
-      <p>Thank you to our sponsors for the love given to our pageant girls through donating your time and resources. You
-        represent beauty of community to empower and uplift. Without you, we wouldn’t be able to create the space to
+      <p class="intro-paragraph">Thank you to our sponsors for the love given to our pageant girls through donating your
+        time and resources. You
+        represent beauty of community to empower and uplift. Without you, we wouldn't be able to create the space to
         allow so many young girls become their most authentic, confidence selves.</p>
     </div>
     <div class="img-right">
@@ -81,6 +95,8 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import externalLinks from '../data/external-links.json'
+import projectSangImage from '../assets/projects/2025-project-sang.jpg'
+import UpcomingEvent from '../components/UpcomingEvent.vue'
 
 // Get application form data
 const applicationForm = externalLinks.applicationForm
@@ -276,5 +292,27 @@ const applicationForm = externalLinks.applicationForm
 
 .sponsor-list {
   background-color: #faf9f8;
+}
+
+.section-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.section-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  display: list-item;
+}
+
+.section-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.intro-paragraph {
+  text-align: left;
+  max-width: 800px;
 }
 </style>

@@ -38,7 +38,11 @@
   <section id="design-team">
     <h2 class="fancy-underline">Design Team</h2>
     <br /><br />
-    <p></p>
+    <p class="design-team-thanks">We extend our heartfelt gratitude to our talented design team for their exceptional
+      work in creating this beautiful website. Their creativity, attention to detail, and dedication to showcasing our
+      community's story through thoughtful design has brought our vision to life. <a
+        href="https://www.notion.so/Vietnamese-American-Youth-Alliance-Miss-Vietnam-San-Diego-ea18725798e242d1b6539c0bf7cca8c5?pvs=40"
+        target="_blank" class="notion-link">Learn more about our design process on Notion</a>.</p>
     <ul class="pageant-staff-list">
       <DesignTeamCard v-for="designTeamMember in designTeamMembers" :key="designTeamMember.id"
         :design-team-member="designTeamMember" />
@@ -263,5 +267,25 @@ export default {
 
 .sponsor-list {
   background-color: #faf9f8;
+}
+
+.design-team-thanks {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.notion-link {
+  color: #DF6BA2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.notion-link:hover {
+  color: #C55A8A;
+  text-decoration: underline;
 }
 </style>

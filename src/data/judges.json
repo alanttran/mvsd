@@ -2,7 +2,8 @@
   {
     "id": 1,
     "name": "Dorothy Tran",
-    "title": "Host for KYXY 96.5"
+    "title": "Host for KYXY 96.5",
+    "image": "dorothy.jpg"
   },
   {
     "id": 2,
@@ -25,17 +26,20 @@
   {
     "id": 5,
     "name": "Linh Truong",
-    "title": "MVSD 1st Princess 2011"
+    "title": "MVSD 1st Princess 2011",
+    "image": "linh-truong.jpg"
   },
   {
     "id": 6,
     "name": "Mai Hoang",
-    "title": "MVSD 2nd Princess 2009"
+    "title": "MVSD 2nd Princess 2009",
+    "image": "mai-hoang.jpg"
   },
   {
     "id": 7,
     "name": "Tracey Nguyen",
-    "title": "Miss Vietnam San Diego 2009"
+    "title": "Miss Vietnam San Diego 2009",
+    "image": "tracey-nguyen.jpg"
   },
   {
     "id": 8,
@@ -52,7 +56,8 @@
   {
     "id": 10,
     "name": "Jennifer Chung",
-    "title": "Founder of Embody, Miss Asian America 2014"
+    "title": "Founder of Embody, Miss Asian America 2014",
+    "image": "jenn-chung.jpg"
   },
   {
     "id": 11,
@@ -63,36 +68,67 @@
   {
     "id": 12,
     "name": "Shela Hoang",
-    "title": "Miss Vietnam San Diego 2014"
+    "title": "Miss Vietnam San Diego 2014",
+    "image": "shela-hoang.jpg"
   },
   {
     "id": 13,
     "name": "Nancy Le",
-    "title": "MVSD 2nd Princess 2015"
+    "title": "MVSD 2nd Princess 2015",
+    "image": "nancy-le.jpg"
   },
   {
     "id": 14,
     "name": "Vietca Do",
-    "title": "Founder of EatPlayDo"
+    "title": "Founder of EatPlayDo",
+    "image": "vietca-do.jpg"
   },
   {
     "id": 15,
     "name": "Linh Huynh",
-    "title": "Linh Huynh Insurance Services, Miss Vietnam Beauty International 2018, MVSD 1st Princess 2017"
+    "title": "Linh Huynh Insurance Services, Miss Vietnam Beauty International 2018, MVSD 1st Princess 2017",
+    "image": "linh-huynh.jpg"
   },
   {
     "id": 16,
     "name": "Tammy Pham",
-    "title": "MVSD Miss Congeniality 2015, MVSD Director 2017"
+    "title": "MVSD Miss Congeniality 2015, MVSD Director 2017",
+    "image": "tammy-pham.jpg"
   },
   {
     "id": 17,
     "name": "Van Tran",
-    "title": "Founder of VanitySD"
+    "title": "Founder of VanitySD",
+    "image": "van-tran.jpg"
   },
   {
     "id": 18,
-    "name": "Mai Phuong",
-    "title": "Miss Asia San Diego 2013"
+    "name": "Catherine Minh Phuong Nguyen",
+    "title": "Mrs Vietnam Ao Dai San Diego 2013",
+    "image": "catherine-phuong.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Natalie Nguyen",
+    "title": "MVSD Miss Ao dai 2016",
+    "image": "natalie-nguyen.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Kristie Le",
+    "title": "MVSD 2nd Princess 2014",
+    "image": "kristie-le.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Lana Tran",
+    "title": "MVSC 2nd Princess 2018",
+    "image": "lana-tran.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Tommy Le",
+    "title": "Former Owner of Angel's Bridal / Pageant Director for Miss Asia / Fashion Designer",
+    "image": "tommy-le.jpg"
   }
 ]

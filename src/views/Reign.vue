@@ -74,6 +74,7 @@ import mayImg from '../assets/timeline/may.jpg'
 import may2Img from '../assets/timeline/may2.jpg'
 import junImg from '../assets/timeline/jun.jpg'
 import julImg from '../assets/timeline/jul.jpg'
+import augImg from '../assets/timeline/aug.jpg'
 import sepImg from '../assets/timeline/sep.jpg'
 import sep2Img from '../assets/timeline/sep2.jpg'
 import octImg from '../assets/timeline/oct.jpg'
@@ -114,7 +115,7 @@ export default {
         'May': mayImg,
         'June': junImg,
         'July': julImg,
-        'August': null, // No image for August
+        'August': augImg,
         'September': sep2Img,
         'October': octImg,
         'November': novImg,

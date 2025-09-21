@@ -111,6 +111,10 @@
       {
         "id": "aug-1",
         "title": "TAP-SD Taiwan Festival"
+      },
+      {
+        "id": "aug-2",
+        "title": "Next MVSD Virtual Kickoff"
       }
     ]
   },
@@ -130,16 +134,12 @@
         "title": "Poway Rotary Parade"
       },
       {
-        "id": "sep-5",
-        "title": "Next MVSD Virtual Kickoff"
-      },
-      {
         "id": "sep-7",
         "title": "SDSU VSA GBM"
       },
       {
         "id": "sep-8",
-        "title": "Hiep Hoi Tet Trung Thu"
+        "title": "Tet Trung Thu (Mid-Autumn Festival)"
       }
     ]
   },

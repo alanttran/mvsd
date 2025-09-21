@@ -4,7 +4,8 @@
 
   <section class="competition-intro-section" id="competition-intro">
     <h2 class="fancy-underline">Competition Details</h2>
-    <p>Our Miss Vietnam San Diego pageant is a comprehensive competition that evaluates contestants across multiple
+    <p class="intro-paragraph">Our Miss Vietnam San Diego pageant is a comprehensive competition that evaluates
+      contestants across multiple
       categories.
       The scoring system is designed to recognize well-rounded individuals who embody the values of leadership, cultural
       pride,
@@ -15,11 +16,14 @@
   <!-- Scoring Breakdown Section -->
   <section class="scoring-section" id="scoring">
     <h2 class="fancy-underline">Scoring Breakdown</h2>
+    <p class="intro-paragraph">The scoring system is cumulative, meaning that the scores from each category are added
+      together to determine the
+      final score.</p>
     <div class="scoring-grid">
       <div class="scoring-category">
         <div class="category-header">
           <h3>Pre-Pageant Score</h3>
-          <span class="percentage">10%</span>
+          <span class="percentage"></span>
         </div>
         <div class="category-details">
           <p>Based on attendance to practices and volunteering activities throughout the preparation period.</p>
@@ -29,7 +33,7 @@
       <div class="scoring-category">
         <div class="category-header">
           <h3>Interviews</h3>
-          <span class="percentage">20%</span>
+          <span class="percentage"></span>
         </div>
         <div class="category-details">
           <p>Personal interviews evaluating communication skills, cultural knowledge, and leadership potential.</p>
@@ -39,7 +43,7 @@
       <div class="scoring-category">
         <div class="category-header">
           <h3>Pageant Night Performance</h3>
-          <span class="percentage">52.5%</span>
+          <span class="percentage"></span>
         </div>
         <div class="category-details">
           <p>Combined evaluation of:</p>
@@ -54,7 +58,7 @@
       <div class="scoring-category main-category">
         <div class="category-header">
           <h3>Final Q&A (Top 3 Only)</h3>
-          <span class="percentage">17.5%</span>
+          <span class="percentage"></span>
         </div>
         <div class="category-details">
           <p>Final Question & Answer round for the top 3 contestants only.</p>
@@ -66,7 +70,7 @@
   <!-- Practice Schedule Section -->
   <section class="practice-section" id="practice-schedule">
     <h2 class="fancy-underline">Proposed Practice Schedule</h2>
-    <p>This is a proposed schedule and is subject to change. Please check back for updates.</p>
+    <p class="intro-paragraph">This is a proposed practice schedule and is subject to change.</p>
     <div class="practice-timeline">
       <div v-for="session in practiceSchedule" :key="session.id" :class="['practice-session', session.type]">
         <div class="session-date">{{ session.date }}</div>
@@ -78,6 +82,9 @@
   <!-- Judge Criteria Section -->
   <section class="judge-criteria-section" id="judge-criteria">
     <h2 class="fancy-underline">Judge Criteria & Vetting</h2>
+    <p class="intro-paragraph">The judges are selected based on their reputation, language, objective, and
+      confidentiality. Once a new contestant class is announced, we will be looking for new judges to join our panel.
+    </p>
     <div class="criteria-container">
       <div class="criteria-table">
         <div class="criteria-header">
@@ -101,6 +108,15 @@
             <h4>Confidentiality</h4>
             <p>Once vetted, they are to keep their identity as a judge confidential until the time of competition.</p>
           </div>
+          <div class="criteria-item">
+            <h4>Financial Independence</h4>
+            <p>Are not financial sponsors or donators to the pageant, VAYA, or Tet Festival to maintain impartiality.
+            </p>
+          </div>
+          <div class="criteria-item">
+            <h4>Training Requirement</h4>
+            <p>Attend mandatory judge training sessions to understand scoring criteria and evaluation standards.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -109,7 +125,8 @@
   <!-- Past Judges Section -->
   <section class="past-judges-section" id="past-judges">
     <h2 class="fancy-underline">Past Judges</h2>
-    <p class="judges-intro">We are honored to have had these distinguished community leaders serve as judges for our
+    <p class="intro-paragraph judges-intro">We are honored to have had these distinguished community leaders serve as
+      judges for our
       pageant.</p>
     <div class="judges-grid">
       <div v-for="judge in judgesData" :key="judge.id" class="judge-card">
@@ -142,7 +159,7 @@ export default {
   },
   data() {
     return {
-      judgesData: judgesData,
+      judgesData: judgesData.sort((a, b) => a.name.localeCompare(b.name)),
       practiceSchedule: practiceSchedule
     }
   },
@@ -168,7 +185,7 @@ h2 {
 }
 
 h2.fancy-underline {
-  line-height: 4;
+  line-height: 3;
 }
 
 .competition-intro-section,
@@ -185,7 +202,7 @@ h2.fancy-underline {
   padding: 2rem;
 }
 
-.competition-intro-section p {
+.intro-paragraph {
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -366,9 +383,6 @@ h2.fancy-underline {
 
 /* Past Judges */
 .judges-intro {
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.6;
   margin-bottom: 2rem;
   max-width: 600px;
 }
@@ -399,8 +413,8 @@ h2.fancy-underline {
 }
 
 .judge-avatar {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background: #DF6BA2;
   border-radius: 50%;
   display: flex;
