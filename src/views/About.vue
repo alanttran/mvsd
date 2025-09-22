@@ -1,4 +1,7 @@
 <template>
+  <!-- SEO Component -->
+  <PageSEO :title="seoTitle" :description="seoDescription" :keywords="seoKeywords" :image="seoImage" :url="seoUrl" />
+
   <!-- landing section  -->
   <PageBanner title="About Us" background-image="about/banner-about.jpg" text-position="bottom" />
 
@@ -55,6 +58,7 @@ import PageBanner from '../components/PageBanner.vue'
 import StaffMemberCard from '../components/StaffMemberCard.vue'
 import WorkshopLeaderCard from '../components/WorkshopLeaderCard.vue'
 import DesignTeamCard from '../components/DesignTeamCard.vue'
+import PageSEO from '../components/PageSEO.vue'
 import staffData from '../data/staff.json'
 import workshopLeadersData from '../data/workshop-leaders.json'
 import designTeamData from '../data/design-team.json'
@@ -69,10 +73,16 @@ export default {
     PageBanner,
     StaffMemberCard,
     WorkshopLeaderCard,
-    DesignTeamCard
+    DesignTeamCard,
+    PageSEO
   },
   data() {
     return {
+      seoTitle: 'About Miss Vietnam San Diego | Our Mission & Team',
+      seoDescription: 'Learn about Miss Vietnam San Diego\'s mission to unite and strengthen the Vietnamese community through women\'s empowerment, leadership, and service since 2006.',
+      seoKeywords: 'About Miss Vietnam San Diego, Vietnamese American pageant, VAYA, community leadership, women empowerment, San Diego Vietnamese community',
+      seoImage: '/src/assets/about/banner-about.jpg',
+      seoUrl: 'https://missvietnamsandiego.com/about',
       staffMembers: staffData,
       workshopLeaders: workshopLeadersData,
       designTeamMembers: designTeamData

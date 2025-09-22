@@ -1,6 +1,9 @@
 <template>
-  <!-- landing section  -->
+  <!-- SEO Component -->
+  <PageSEO :title="seoTitle" :description="seoDescription" :keywords="seoKeywords" :image="seoImage" :url="seoUrl"
+    :structured-data="structuredData" />
 
+  <!-- landing section  -->
   <div class="landing">
     <div class="landing-text fancy-underline">
       <h1>Miss Vietnam of San Diego</h1>
@@ -127,9 +130,39 @@ import { RouterLink } from 'vue-router'
 import externalLinks from '../data/external-links.json'
 import projectSangImage from '../assets/projects/2025-project-sang.jpg'
 import UpcomingEvent from '../components/UpcomingEvent.vue'
+import PageSEO from '../components/PageSEO.vue'
+import { useSEO } from '../composables/useSEO.js'
 
 // Get application form data
 const applicationForm = externalLinks.applicationForm
+
+// SEO data
+const { generateEventSchema } = useSEO()
+
+const seoTitle = 'Miss Vietnam San Diego | Vietnamese-American Beauty Pageant & Community'
+const seoDescription = 'Miss Vietnam San Diego is a prestigious Vietnamese-American beauty pageant celebrating culture, sisterhood, and community impact. Join our sisterhood and make a difference in San Diego.'
+const seoKeywords = 'Miss Vietnam San Diego, Vietnamese American pageant, beauty pageant, Vietnamese culture, San Diego, community service, sisterhood, VAYA, 2026 applications'
+const seoImage = '/src/assets/banner.jpg'
+const seoUrl = 'https://missvietnamsandiego.com/'
+
+// Structured data for the pageant event
+const structuredData = generateEventSchema({
+  name: 'Miss Vietnam San Diego 2026 Pageant',
+  description: 'Annual Vietnamese-American beauty pageant celebrating culture, sisterhood, and community impact in San Diego.',
+  startDate: '2026-02-01',
+  endDate: '2026-02-28',
+  location: {
+    name: 'San Diego, CA',
+    address: 'San Diego, California'
+  },
+  offers: {
+    price: '0',
+    currency: 'USD',
+    availability: 'https://schema.org/InStock'
+  },
+  image: 'https://missvietnamsandiego.com/src/assets/banner.jpg',
+  url: 'https://missvietnamsandiego.com/apply'
+})
 </script>
 
 <style scoped lang="scss">

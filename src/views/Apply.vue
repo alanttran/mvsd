@@ -1,4 +1,7 @@
 <template>
+  <!-- SEO Component -->
+  <PageSEO :title="seoTitle" :description="seoDescription" :keywords="seoKeywords" :image="seoImage" :url="seoUrl" />
+
   <!-- landing section  -->
   <PageBanner title="Program Details and Application" background-image="royal-courts/2024/contestants-apply-banner.jpg"
     text-position="bottom" />
@@ -125,6 +128,7 @@
 
 <script>
 import PageBanner from '../components/PageBanner.vue'
+import PageSEO from '../components/PageSEO.vue'
 import externalLinks from '../data/external-links.json'
 
 /**
@@ -134,11 +138,17 @@ import externalLinks from '../data/external-links.json'
 export default {
   name: 'Apply',
   components: {
-    PageBanner
+    PageBanner,
+    PageSEO
   },
   data() {
     return {
-      applicationForm: externalLinks.applicationForm
+      applicationForm: externalLinks.applicationForm,
+      seoTitle: 'Apply to Miss Vietnam San Diego 2026 | Program Details & Application',
+      seoDescription: 'Join the Miss Vietnam San Diego sisterhood! Apply now for 2026 and embrace your cultural roots while developing leadership skills and community engagement.',
+      seoKeywords: 'Apply Miss Vietnam San Diego, 2026 applications, Vietnamese American pageant, sisterhood, community leadership, San Diego pageant',
+      seoImage: '/src/assets/royal-courts/2024/contestants-apply-banner.jpg',
+      seoUrl: 'https://missvietnamsandiego.com/apply'
     }
   }
 }

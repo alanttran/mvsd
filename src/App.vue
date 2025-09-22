@@ -3,9 +3,13 @@ import { RouterLink, RouterView } from 'vue-router'
 import { getPageHeadings } from './utils/pageHeadings.js'
 import externalLinks from './data/external-links.json'
 import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { useSEO } from './composables/useSEO.js'
 
 // Get current year for copyright
 const currentYear = computed(() => new Date().getFullYear())
+
+// SEO management
+const { generateOrganizationSchema, injectStructuredData } = useSEO()
 
 // Mobile menu state
 const isMobileMenuOpen = ref(false)
@@ -37,6 +41,22 @@ const handleClickOutside = (event) => {
 // Add event listeners
 onMounted(() => {
   document.addEventListener('click', handleClickOutside)
+
+  // Inject organization structured data
+  const organizationData = generateOrganizationSchema({
+    contactPoint: {
+      "@type": "ContactPoint",
+      "contactType": "General Inquiry",
+      "email": externalLinks.contact.email
+    },
+    sameAs: [
+      externalLinks.socialMedia.instagram,
+      externalLinks.socialMedia.facebook,
+      externalLinks.socialMedia.youtube,
+      externalLinks.socialMedia.tiktok
+    ]
+  })
+  injectStructuredData(organizationData)
 })
 
 onUnmounted(() => {
@@ -127,9 +147,9 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
 
 <template>
   <div class="mvsd-container">
-    <nav class="navbar">
-      <a class="navbar-logo" href="/">
-        <img src="./assets/mvsd.svg" style="height: 100px" alt="">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <a class="navbar-logo" href="/" aria-label="Miss Vietnam San Diego - Home">
+        <img src="./assets/mvsd.svg" style="height: 100px" alt="Miss Vietnam San Diego Logo">
       </a>
 
       <!-- Hamburger menu button -->
@@ -141,19 +161,20 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
       </button>
 
       <!-- Desktop navigation -->
-      <ul class="navbar-pages navbar-pages--desktop">
-        <li v-for="link in activeNavLinks" :key="link.name" class="nav-item">
-          <RouterLink class="nav-link" :to="link.path" :aria-current="link.name === 'Home' ? 'page' : undefined">
+      <ul class="navbar-pages navbar-pages--desktop" role="menubar">
+        <li v-for="link in activeNavLinks" :key="link.name" class="nav-item" role="none">
+          <RouterLink class="nav-link" :to="link.path" :aria-current="link.name === 'Home' ? 'page' : undefined"
+            role="menuitem">
             {{ link.name }}
           </RouterLink>
         </li>
       </ul>
 
       <!-- Mobile navigation -->
-      <ul class="navbar-pages navbar-pages--mobile" :class="{ 'navbar-pages--open': isMobileMenuOpen }">
-        <li v-for="link in activeNavLinks" :key="link.name" class="nav-item">
+      <ul class="navbar-pages navbar-pages--mobile" :class="{ 'navbar-pages--open': isMobileMenuOpen }" role="menubar">
+        <li v-for="link in activeNavLinks" :key="link.name" class="nav-item" role="none">
           <RouterLink class="nav-link" :to="link.path" :aria-current="link.name === 'Home' ? 'page' : undefined"
-            @click="closeMobileMenu">
+            @click="closeMobileMenu" role="menuitem">
             {{ link.name }}
           </RouterLink>
         </li>
@@ -161,14 +182,15 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
     </nav>
 
 
-    <main>
+    <main role="main">
       <RouterView />
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="mvsd-footer__container">
         <div class="footer-logo">
-          <img src="./assets/mvsd.svg" alt="Logo" height="100" class="d-inline-block align-text-top">
+          <img src="./assets/mvsd.svg" alt="Miss Vietnam San Diego Logo" height="100"
+            class="d-inline-block align-text-top">
           <div class="footer-trademark">
             <p>&copy; 2006-{{ currentYear }} Miss Vietnam of San Diego. All rights reserved.</p>
             <p>Trademark belongs to Vietnamese-American Youth Alliance (VAYA).</p>

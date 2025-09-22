@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://missvietnamsandiego.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Disallow specific paths if needed
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all other content
+Allow: /src/assets/
+Allow: /dist/assets/
