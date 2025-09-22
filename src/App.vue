@@ -192,6 +192,7 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
           <img src="./assets/mvsd.svg" alt="Miss Vietnam San Diego Logo" height="100"
             class="d-inline-block align-text-top">
           <div class="footer-trademark">
+            <h4>Miss Vietnam San Diego</h4>
             <p>&copy; 2006-{{ currentYear }} Miss Vietnam of San Diego. All rights reserved.</p>
             <p>Trademark belongs to Vietnamese-American Youth Alliance (VAYA).</p>
           </div>
@@ -200,7 +201,7 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
         <!-- About and Contact grouped section (matches nav order: About) -->
         <div class="foot-col foot-col--grouped foot-col--about-contact" v-if="aboutSection || contactSection">
           <div v-if="aboutSection" class="footer-subsection">
-            <h4>About</h4>
+            <h4>About Our Organization</h4>
             <ul>
               <li v-for="link in aboutSection.links" :key="link.text">
                 <RouterLink v-if="link.href.startsWith('/')" :to="link.href">{{ link.text }}</RouterLink>
@@ -209,7 +210,7 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
             </ul>
           </div>
           <div v-if="contactSection" class="footer-subsection">
-            <h4>Contact</h4>
+            <h4>Get In Touch</h4>
             <ul>
               <li v-for="link in contactSection.links" :key="link.text">
                 <RouterLink v-if="link.href.startsWith('/')" :to="link.href">{{ link.text }}</RouterLink>
@@ -217,10 +218,14 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
               </li>
             </ul>
             <div v-if="contactSection.social" class="social-links">
-              <a :href="externalLinks.socialMedia.instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-              <a :href="externalLinks.socialMedia.facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-              <a :href="externalLinks.socialMedia.youtube"><i class="fa-brands fa-youtube"></i></a>
-              <a :href="externalLinks.socialMedia.tiktok" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+              <a :href="externalLinks.socialMedia.instagram" target="_blank" aria-label="Follow us on Instagram"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a :href="externalLinks.socialMedia.facebook" target="_blank" aria-label="Follow us on Facebook"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a :href="externalLinks.socialMedia.youtube" aria-label="Subscribe to our YouTube channel"><i
+                  class="fa-brands fa-youtube"></i></a>
+              <a :href="externalLinks.socialMedia.tiktok" target="_blank" aria-label="Follow us on TikTok"><i
+                  class="fa-brands fa-tiktok"></i></a>
             </div>
           </div>
         </div>
@@ -228,7 +233,7 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
         <!-- Sisterhood section (matches nav order: Sisterhood) -->
         <div v-for="section in regularFooterSections.filter(s => s.title === 'Sisterhood')" :key="section.title"
           class="foot-col">
-          <h4>{{ section.title }}</h4>
+          <h4>Our Sisterhood</h4>
           <ul>
             <li v-for="link in section.links" :key="link.text">
               <RouterLink v-if="link.href.startsWith('/')" :to="link.href">{{ link.text }}</RouterLink>
@@ -240,7 +245,7 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
         <!-- Competition section (matches nav order: Competition) -->
         <div v-for="section in regularFooterSections.filter(s => s.title === 'Competition')" :key="section.title"
           class="foot-col">
-          <h4>{{ section.title }}</h4>
+          <h4>Pageant Competition</h4>
           <ul>
             <li v-for="link in section.links" :key="link.text">
               <RouterLink v-if="link.href.startsWith('/')" :to="link.href">{{ link.text }}</RouterLink>
@@ -252,7 +257,7 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
         <!-- Impact and Reign grouped section (matches nav order: Impact, Reign) -->
         <div class="foot-col foot-col--grouped foot-col--impact-reign" v-if="impactSection || reignSection">
           <div v-if="impactSection" class="footer-subsection">
-            <h4>Impact</h4>
+            <h4>Community Impact</h4>
             <ul>
               <li v-for="link in impactSection.links" :key="link.text">
                 <RouterLink v-if="link.href.startsWith('/')" :to="link.href">{{ link.text }}</RouterLink>
@@ -261,7 +266,7 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
             </ul>
           </div>
           <div v-if="reignSection" class="footer-subsection">
-            <h4>Reign</h4>
+            <h4>Royal Court</h4>
             <ul>
               <li v-for="link in reignSection.links" :key="link.text">
                 <RouterLink v-if="link.href.startsWith('/')" :to="link.href">{{ link.text }}</RouterLink>
@@ -274,7 +279,7 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
         <!-- Apply Now section (matches nav order: Apply Now!) -->
         <div v-for="section in regularFooterSections.filter(s => s.title === 'Apply Now')" :key="section.title"
           class="foot-col">
-          <h4>{{ section.title }}</h4>
+          <h4>Join Our Program</h4>
           <ul>
             <li v-for="link in section.links" :key="link.text">
               <RouterLink v-if="link.href.startsWith('/')" :to="link.href">{{ link.text }}</RouterLink>
@@ -480,6 +485,15 @@ export default {
   h4 {
     line-height: 2;
     font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-trademark h4 {
+    margin-bottom: 0.75rem;
+    font-size: 1.1em;
+    color: #2c3e50;
   }
 
   .social-links {
