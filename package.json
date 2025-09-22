@@ -6,8 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "cross-env NODE_ENV=production vite build",
+    "build:github": "node scripts/generate-sitemap.js github && node scripts/generate-robots.js github && cross-env NODE_ENV=production VITE_DEPLOY_TARGET=github vite build",
+    "build:production": "node scripts/generate-sitemap.js production && node scripts/generate-robots.js production && cross-env NODE_ENV=production VITE_DEPLOY_TARGET=production vite build",
     "preview": "vite preview",
-    "preview:host": "vite preview --host"
+    "preview:host": "vite preview --host",
+    "preview:github": "cross-env VITE_DEPLOY_TARGET=github vite preview",
+    "preview:production": "cross-env VITE_DEPLOY_TARGET=production vite preview",
+    "sitemap:github": "node scripts/generate-sitemap.js github",
+    "sitemap:production": "node scripts/generate-sitemap.js production",
+    "robots:github": "node scripts/generate-robots.js github",
+    "robots:production": "node scripts/generate-robots.js production"
   },
   "dependencies": {
     "reset-css": "^5.0.2",

@@ -13,7 +13,16 @@ export function useSEO() {
     "Miss Vietnam San Diego, Vietnamese American pageant, beauty pageant, Vietnamese culture, San Diego, community service, sisterhood, VAYA"
   );
   const image = ref("/src/assets/banner.jpg");
-  const url = ref("https://missvietnamsandiego.com");
+
+  // Determine base URL based on environment
+  const getBaseUrl = () => {
+    if (import.meta.env.VITE_DEPLOY_TARGET === "github") {
+      return "https://yourusername.github.io/mvsd";
+    }
+    return "https://missvietnamsandiego.com";
+  };
+
+  const url = ref(getBaseUrl());
 
   /**
    * Update page title and meta tags
@@ -114,13 +123,14 @@ export function useSEO() {
    * @returns {Object} JSON-LD structured data
    */
   function generateOrganizationSchema(options = {}) {
+    const baseUrl = getBaseUrl();
     return {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Miss Vietnam San Diego",
       alternateName: "MVSD",
-      url: "https://missvietnamsandiego.com",
-      logo: "https://missvietnamsandiego.com/src/assets/mvsd.svg",
+      url: baseUrl,
+      logo: `${baseUrl}/src/assets/mvsd.svg`,
       description:
         "A prestigious Vietnamese-American beauty pageant celebrating culture, sisterhood, and community impact in San Diego.",
       foundingDate: "2006",
@@ -155,6 +165,7 @@ export function useSEO() {
    * @returns {Object} JSON-LD structured data
    */
   function generateEventSchema(event) {
+    const baseUrl = getBaseUrl();
     return {
       "@context": "https://schema.org",
       "@type": "Event",
@@ -172,7 +183,7 @@ export function useSEO() {
       organizer: {
         "@type": "Organization",
         name: "Miss Vietnam San Diego",
-        url: "https://missvietnamsandiego.com",
+        url: baseUrl,
       },
       offers: event.offers
         ? {
@@ -183,9 +194,8 @@ export function useSEO() {
               event.offers.availability || "https://schema.org/InStock",
           }
         : undefined,
-      image:
-        event.image || "https://missvietnamsandiego.com/src/assets/banner.jpg",
-      url: event.url || "https://missvietnamsandiego.com/competition",
+      image: event.image || `${baseUrl}/src/assets/banner.jpg`,
+      url: event.url || `${baseUrl}/competition`,
     };
   }
 

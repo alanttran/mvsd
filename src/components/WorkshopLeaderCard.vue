@@ -57,7 +57,7 @@ export default {
 
 .workshop-leader-card {
   margin: 1rem 0;
-  flex: none;
+  flex: 30%;
   max-width: 360px;
 
   .pageant-staff-name {

@@ -6,9 +6,20 @@ import imageminPngquant from "imagemin-pngquant";
 import imageminSvgo from "imagemin-svgo";
 import imageminWebp from "imagemin-webp";
 
+// Determine base path based on environment
+const getBasePath = () => {
+  if (
+    process.env.NODE_ENV === "production" &&
+    process.env.VITE_DEPLOY_TARGET === "github"
+  ) {
+    return "/mvsd/";
+  }
+  return "/";
+};
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/mvsd/",
+  base: getBasePath(),
   css: {
     preprocessorOptions: {
       scss: {
