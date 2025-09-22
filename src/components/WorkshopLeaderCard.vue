@@ -56,7 +56,6 @@ export default {
 @use '../styles/variables' as *;
 
 .workshop-leader-card {
-  width: 30%;
   margin: 1rem 0;
   flex: none;
   max-width: 360px;

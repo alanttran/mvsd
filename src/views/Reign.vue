@@ -143,10 +143,6 @@ h2 {
   width: fit-content;
 }
 
-h2.fancy-underline {
-  line-height: 4;
-}
-
 .impact-title-section {
   display: flex;
   flex-direction: column;

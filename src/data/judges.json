@@ -14,7 +14,7 @@
   {
     "id": 3,
     "name": "An Thien Phan",
-    "title": "CEO & Founder for AAPI Artists for Mental Illness (AAMI), California State Queen 2024",
+    "title": "CEO & Founder for AAPI Artists for Mental Initiative (AAMI), California State Queen 2024",
     "image": "an-phan.jpg"
   },
   {
@@ -68,7 +68,7 @@
   {
     "id": 12,
     "name": "Shela Hoang",
-    "title": "Miss Vietnam San Diego 2014",
+    "title": "MVSD 1st Princess 2014",
     "image": "shela-hoang.jpg"
   },
   {
@@ -130,5 +130,17 @@
     "name": "Tommy Le",
     "title": "Former Owner of Angel's Bridal / Pageant Director for Miss Asia / Fashion Designer",
     "image": "tommy-le.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Tony Pham",
+    "title": "Optometrist",
+    "image": "tony-pham.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Trang Nguyen",
+    "title": "Medical Professional",
+    "image": "trang-nguyen.jpg"
   }
 ]

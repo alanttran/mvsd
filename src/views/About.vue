@@ -95,9 +95,20 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   max-width: 960px;
+
+  @media (max-width: 1024px) {
+    gap: 12px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 8px;
+    padding: 0 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 
@@ -115,6 +126,23 @@ export default {
   img {
     width: 100%;
   }
+
+  // Mobile responsive: stack images vertically
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .img-left,
+    .img-right {
+      flex: none;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .section-content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 }
 
 #pageant-staff,
@@ -124,6 +152,7 @@ export default {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 0 1rem;
 
   h2 {
     text-align: center;
@@ -140,16 +169,44 @@ export default {
 
   .pageant-staff-profile {
     flex: none;
-    width: 30%;
     margin: .5rem;
     border: 1px solid $mvsd-colors-primary;
     border-radius: 10px;
+
+    // Responsive card widths
+    @media (max-width: 1024px) {
+      width: 45%; // 2 cards per row on tablets
+    }
+
+    @media (max-width: 768px) {
+      width: 100%; // 1 card per row on mobile
+      margin: .25rem 0;
+    }
+
+    @media (min-width: 1200px) {
+      width: 28%; // Slightly smaller on very large screens for better spacing
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 0.5rem;
+
   }
 }
 
 
 .img-left {
   flex: 50%;
+
+  @media (max-width: 768px) {
+    flex: none;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 .img-left img {
@@ -161,6 +218,13 @@ export default {
   padding-left: 2rem;
   padding-right: 2rem;
   flex: 50%;
+
+  @media (max-width: 768px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: none;
+    width: 100%;
+  }
 }
 
 
@@ -275,6 +339,16 @@ export default {
   margin: 0 auto 2rem auto;
   line-height: 1.6;
   font-size: 1.1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin: 0 auto 1.5rem auto;
+  }
+}
+
+section {
+  margin-top: 30px;
 }
 
 .notion-link {

@@ -81,12 +81,42 @@
   </section>
 
   <section class="sponsor-list">
-    <img src="../assets/sponsor-forever-beaumore.svg" alt="Forever Beaumore">
-    <img src="../assets/sponsor-emily-thao-photog.png" alt="Emily Thao Photography">
-    <img src="../assets/sponsor-gina-mai-hair.svg" alt="Gina Mai Hair">
-    <img src="../assets/sponsor-JP-charming-beauty.svg" alt="Charming Beauty Jennifer Pham">
-    <img src="../assets/sponsor-S-logo.svg" alt="S-logo">
-    <img src="../assets/sponsor-thuy-lam.svg" alt="Thuy Lam Makeup">
+    <a href="https://www.instagram.com/freshfacebythuy/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/fresh-face-by-thuy.jpg" alt="Fresh Face by Thuy">
+    </a>
+    <a href="https://www.instagram.com/iamginamaihair/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/opaluxe.jpg" alt="Opaluxe Studio & Lounge">
+    </a>
+    <a href="https://www.instagram.com/hairbyhao/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/hairbyhao.jpg" alt="Hair by Hao">
+    </a>
+    <a href="https://www.instagram.com/beautybarblvd/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/beauty-bar-blvd.jpg" alt="Beauty Bar Blvd">
+    </a>
+    <a href="https://www.instagram.com/aliciasbeautynco/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/alicia-beauty.jpg" alt="Alicia's Beauty">
+    </a>
+    <a href="https://www.instagram.com/karadecor.sd/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/kara-decor.jpg" alt="Kara Decor">
+    </a>
+    <a href="https://www.instagram.com/jpcharmingbeauty/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/jp-charming.jpg" alt="JP Charming Beauty">
+    </a>
+    <a href="https://www.instagram.com/makeupbyvanny/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/makeup-by-vanny.jpg" alt="Makeup by Vanny">
+    </a>
+    <a href="https://www.instagram.com/lovenailsbysarah/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/nails-by-sarah.jpg" alt="Love Nails by Sarah">
+    </a>
+    <a href="https://www.instagram.com/makeupbychristranx3/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/makeupbychristinranx3.jpg" alt="Makeup by Christin Ran">
+    </a>
+    <a href="https://www.instagram.com/sydneytranphotography/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/sydney-tran-photography.jpg" alt="Sydney Tran Photography">
+    </a>
+    <a href="https://www.instagram.com/longtruong.jpg/" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/sponsors/long-truong-photography.jpg" alt="Long Truong Photography">
+    </a>
   </section>
 
 
@@ -111,6 +141,31 @@ const applicationForm = externalLinks.applicationForm
   justify-content: space-evenly;
   gap: 4em;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    padding: 30px 1rem;
+    gap: 2em;
+    justify-content: center;
+  }
+}
+
+.sponsor-list a {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-list a:hover {
+  transform: scale(1.05);
+}
+
+.sponsor-list img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+    max-width: 150px;
+  }
 }
 
 .text-left {
@@ -133,11 +188,34 @@ const applicationForm = externalLinks.applicationForm
   img {
     width: 100%;
   }
+
+  // Mobile responsive: stack images vertically
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .img-left,
+    .img-right {
+      flex: none;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .section-content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 }
 
 
 .img-left {
   flex: 50%;
+
+  @media (max-width: 768px) {
+    flex: none;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 .img-left img {
@@ -149,6 +227,13 @@ const applicationForm = externalLinks.applicationForm
   padding-left: 2rem;
   padding-right: 2rem;
   flex: 50%;
+
+  @media (max-width: 768px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: none;
+    width: 100%;
+  }
 }
 
 
@@ -167,6 +252,16 @@ const applicationForm = externalLinks.applicationForm
   .landing-button {
     margin-left: 120px;
   }
+
+  @media (max-width: 768px) {
+    height: 300px;
+    background-size: cover;
+    background-position: top;
+
+    .landing-button {
+      margin-left: 1rem;
+    }
+  }
 }
 
 .landing-text {
@@ -175,6 +270,12 @@ const applicationForm = externalLinks.applicationForm
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 768px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 .landing-button {
@@ -184,11 +285,6 @@ const applicationForm = externalLinks.applicationForm
   padding: 12px 24px;
 }
 
-.fancy-underline {
-  line-height: 2.8;
-  background: url('../assets/fancy-underline.svg') bottom no-repeat;
-  background-size: 100%;
-}
 
 .announcements-section {
   margin-top: 30px;

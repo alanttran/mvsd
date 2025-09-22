@@ -52,9 +52,8 @@ export default {
 @use '../styles/variables' as *;
 
 .staff-member-card {
-  width: 30%;
   margin: 1rem 0;
-  flex: none;
+  flex: 30%;
   max-width: 360px;
 
   .pageant-staff-name {

@@ -2,10 +2,48 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { getPageHeadings } from './utils/pageHeadings.js'
 import externalLinks from './data/external-links.json'
-import { computed } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
 
 // Get current year for copyright
 const currentYear = computed(() => new Date().getFullYear())
+
+// Mobile menu state
+const isMobileMenuOpen = ref(false)
+
+// Toggle mobile menu
+const toggleMobileMenu = () => {
+  isMobileMenuOpen.value = !isMobileMenuOpen.value
+  // Prevent body scroll when menu is open
+  if (isMobileMenuOpen.value) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+}
+
+// Close mobile menu when route changes
+const closeMobileMenu = () => {
+  isMobileMenuOpen.value = false
+  document.body.style.overflow = ''
+}
+
+// Handle click outside to close menu
+const handleClickOutside = (event) => {
+  if (isMobileMenuOpen.value && !event.target.closest('.navbar')) {
+    closeMobileMenu()
+  }
+}
+
+// Add event listeners
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside)
+  // Clean up body overflow on unmount
+  document.body.style.overflow = ''
+})
 
 // Centralized navigation configuration
 const navigationLinks = [
@@ -93,9 +131,29 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
       <a class="navbar-logo" href="/">
         <img src="./assets/mvsd.svg" style="height: 100px" alt="">
       </a>
-      <ul class="navbar-pages">
+
+      <!-- Hamburger menu button -->
+      <button class="hamburger-menu" @click="toggleMobileMenu" :class="{ 'hamburger-menu--open': isMobileMenuOpen }"
+        :aria-expanded="isMobileMenuOpen" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Desktop navigation -->
+      <ul class="navbar-pages navbar-pages--desktop">
         <li v-for="link in activeNavLinks" :key="link.name" class="nav-item">
           <RouterLink class="nav-link" :to="link.path" :aria-current="link.name === 'Home' ? 'page' : undefined">
+            {{ link.name }}
+          </RouterLink>
+        </li>
+      </ul>
+
+      <!-- Mobile navigation -->
+      <ul class="navbar-pages navbar-pages--mobile" :class="{ 'navbar-pages--open': isMobileMenuOpen }">
+        <li v-for="link in activeNavLinks" :key="link.name" class="nav-item">
+          <RouterLink class="nav-link" :to="link.path" :aria-current="link.name === 'Home' ? 'page' : undefined"
+            @click="closeMobileMenu">
             {{ link.name }}
           </RouterLink>
         </li>
@@ -118,7 +176,7 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
         </div>
 
         <!-- About and Contact grouped section (matches nav order: About) -->
-        <div class="foot-col foot-col--grouped" v-if="aboutSection || contactSection">
+        <div class="foot-col foot-col--grouped foot-col--about-contact" v-if="aboutSection || contactSection">
           <div v-if="aboutSection" class="footer-subsection">
             <h4>About</h4>
             <ul>
@@ -170,7 +228,7 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
         </div>
 
         <!-- Impact and Reign grouped section (matches nav order: Impact, Reign) -->
-        <div class="foot-col foot-col--grouped" v-if="impactSection || reignSection">
+        <div class="foot-col foot-col--grouped foot-col--impact-reign" v-if="impactSection || reignSection">
           <div v-if="impactSection" class="footer-subsection">
             <h4>Impact</h4>
             <ul>
@@ -221,15 +279,62 @@ export default {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .navbar-logo {
   margin-left: 1rem;
+  z-index: 1001; // Ensure logo stays above mobile menu
+}
+
+// Hamburger menu button
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  margin-right: 1rem;
+
+  .hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #363636;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  // Hamburger animation when open
+  &.hamburger-menu--open {
+    .hamburger-line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
 }
 
 .navbar-pages {
   display: flex;
-  width: 45%;
   justify-content: space-evenly;
   align-items: center;
 
@@ -237,6 +342,7 @@ export default {
     text-decoration: none;
     position: relative;
     color: #363636;
+    margin: 0 10px;
 
     &.router-link-active {
       &:after {
@@ -260,6 +366,67 @@ export default {
         height: 2px;
         background: $mvsd-colors-primary;
       }
+    }
+  }
+
+  // Desktop navigation
+  &--desktop {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Mobile navigation
+  &--mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    &.navbar-pages--open {
+      transform: translateX(0);
+    }
+
+    li {
+      margin: 1rem 0;
+
+      a {
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 1rem 2rem;
+        display: block;
+        text-align: center;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: rgba($mvsd-colors-primary, 0.1);
+          transform: translateY(-2px);
+        }
+
+        &.router-link-active {
+          background-color: rgba($mvsd-colors-primary, 0.2);
+          color: $mvsd-colors-primary;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
     }
   }
 }
@@ -324,6 +491,48 @@ export default {
           margin-bottom: 0;
         }
       }
+    }
+
+    // Hide navigation sections on mobile (keep only logo and contact)
+    @media (max-width: 768px) {
+      &:not(.foot-col--grouped) {
+        display: none;
+      }
+    }
+  }
+
+  // Hide About section in about-contact grouped section on mobile
+  .foot-col--about-contact {
+    @media (max-width: 768px) {
+      .footer-subsection:first-child {
+        display: none; // Hide About section
+      }
+    }
+  }
+
+  // Hide entire Impact and Reign grouped section on mobile
+  .foot-col--impact-reign {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Mobile-specific adjustments
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 16px;
+
+    .footer-logo {
+      margin-right: 0;
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
+
+    .foot-col--grouped {
+      width: 100%;
+      max-width: 400px;
     }
   }
 }

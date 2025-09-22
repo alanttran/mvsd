@@ -1,7 +1,7 @@
 <template>
   <div class="mvsd-former-titleholders__container">
     <div>
-      <img width="666px" :src="getImageSrc(data.image)" :alt="data.alt">
+      <img class="responsive-image" :src="getImageSrc(data.image)" :alt="data.alt">
     </div>
     <div class="former-titleholders-list">
       <div v-for="titleholder in data.titleholders" :key="titleholder.title">
@@ -55,5 +55,27 @@ function getImageSrc(imagePath) {
 
 .former-titleholders-list {
   line-height: 2;
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Fixed width for carousel on larger viewports */
+.carousel-image {
+  width: 666px;
+  height: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 </style>

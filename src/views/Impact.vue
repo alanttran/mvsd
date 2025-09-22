@@ -1,7 +1,7 @@
 <template>
   <PageBanner title="Our Impact" background-image="banner-impact.jpg" :show-gradient="true" text-position="bottom" />
   <section class="impact-title-section" id="empowering-beauty">
-    <h2 class="fancy-underline">Empowering Beauty, Inspiring Community</h2>
+    <h2 class="fancy-underline">Inspiring Community</h2>
     <p class="intro-paragraph">Miss Vietnam San Diego is making lasting waves throughout the Vietnamese community in San
       Diego by empowering
       beauty and inspiring community. MVSD is giving Vietnamese girls the confidence to become their best selves and the
@@ -171,9 +171,6 @@ h2 {
   width: fit-content;
 }
 
-h2.fancy-underline {
-  line-height: 3;
-}
 
 .intro-paragraph {
   text-align: center;

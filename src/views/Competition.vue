@@ -184,9 +184,6 @@ h2 {
   width: fit-content;
 }
 
-h2.fancy-underline {
-  line-height: 3;
-}
 
 .competition-intro-section,
 .scoring-section,

@@ -181,13 +181,17 @@ b {
 }
 
 .fancy-underline {
-  line-height: 2.8;
   background: url('./assets/fancy-underline.svg') bottom no-repeat;
   background-size: 100%;
+  padding-bottom: 24px;
 }
 
 .fancy-underline-2 {
-  line-height: 2;
   background: url('./assets/fancy-underline2.svg') bottom no-repeat;
   background-size: 100%;
+  padding-bottom: 24px;
+}
+
+.section-content {
+  box-sizing: border-box;
 }

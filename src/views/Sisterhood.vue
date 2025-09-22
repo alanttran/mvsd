@@ -9,12 +9,23 @@
 
     <h2 class="fancy-underline">Former Titleholders</h2>
 
-    <!-- Carousel Container -->
-    <div class="mvsd-carousel__container">
+    <!-- Desktop Carousel Container -->
+    <div class="mvsd-carousel__container carousel-desktop">
       <!-- Carousel Track -->
       <div class="carousel-track" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
-        <FormerTitleholderCard v-for="(titleholderData, index) in formerTitleholdersData" :key="titleholderData.year"
-          :data="titleholderData" />
+        <div v-for="(titleholderData, index) in formerTitleholdersData" :key="titleholderData.year"
+          class="carousel-card-wrapper">
+          <div class="mvsd-former-titleholders__container">
+            <div>
+              <img class="carousel-image" :src="getImageSrc(titleholderData.image)" :alt="titleholderData.alt">
+            </div>
+            <div class="former-titleholders-list">
+              <div v-for="titleholder in titleholderData.titleholders" :key="titleholder.title">
+                {{ titleholder.title }} - {{ titleholder.name }}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Navigation Buttons -->
@@ -32,13 +43,21 @@
           :aria-label="`Go to slide ${index + 1}`"></button>
       </div>
     </div>
+
+    <!-- Mobile List Container -->
+    <div class="mvsd-list__container carousel-mobile">
+      <FormerTitleholderCard v-for="(titleholderData, index) in formerTitleholdersData" :key="titleholderData.year"
+        :data="titleholderData" />
+    </div>
   </section>
 
   <section class="" id="former-contestants-section">
 
     <h2 class="fancy-underline">2025 Contestants </h2>
 
-    <img src="../assets/royal-courts/2025/contestants.jpg" alt="Royal Court 2025">
+    <div class="contestants-image-container">
+      <img src="../assets/royal-courts/2025/contestants.jpg" alt="Royal Court 2025">
+    </div>
 
   </section>
 
@@ -55,6 +74,17 @@ import formerTitleholdersData from '../data/former-titleholders.json'
 const currentSlide = ref(0)
 const totalSlides = ref(formerTitleholdersData.length)
 let autoPlayInterval = null
+
+/**
+ * Get the correct image source for Vite asset handling
+ * @param {string} imagePath - The image path from the data
+ * @returns {string} The processed image URL
+ */
+function getImageSrc(imagePath) {
+  // Remove the leading slash and convert to relative path for Vite
+  const cleanPath = imagePath.replace(/^\/src\//, '')
+  return new URL(`../assets/${cleanPath}`, import.meta.url).href
+}
 
 // Carousel methods
 function nextSlide() {
@@ -109,6 +139,10 @@ onUnmounted(() => {
   flex: 50%;
 }
 
+.former-titleholders-list {
+  line-height: 2;
+}
+
 /* about section  */
 .mvsd-section__container {
   display: flex;
@@ -141,11 +175,6 @@ onUnmounted(() => {
   flex: 50%;
 }
 
-.fancy-underline {
-  line-height: 2.8;
-  background: url('../assets/fancy-underline.svg') bottom no-repeat;
-  background-size: 100%;
-}
 
 
 .announcements-section {
@@ -255,6 +284,7 @@ onUnmounted(() => {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 2rem 1rem;
 
   h2 {
     width: fit-content;
@@ -262,7 +292,34 @@ onUnmounted(() => {
     margin-bottom: 2rem;
   }
 
+  @media (max-width: 768px) {
+    padding: 1rem 0.5rem;
 
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.contestants-image-container {
+  max-width: 100%;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
 }
 
 /* Carousel Styles */
@@ -272,12 +329,102 @@ onUnmounted(() => {
   max-width: 800px;
   overflow: hidden;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+/* Desktop carousel - show on larger screens */
+.carousel-desktop {
+  display: block;
+
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+/* Mobile list - hide on larger screens */
+.carousel-mobile {
+  display: none !important;
+
+  @media (max-width: 768px) {
+    display: block !important;
+  }
+}
+
+/* Responsive image class */
+.responsive-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Fixed width for carousel images on larger viewports */
+.carousel-image {
+  width: 666px;
+  height: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Mobile list container */
+.mvsd-list__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  max-width: 100%;
+
+  @media (max-width: 480px) {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  /* Override FormerTitleholderCard styles for mobile list */
+  .mvsd-former-titleholders__container {
+    min-width: unset;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 1.5rem;
+    }
+
+    img {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
+}
+
+.carousel-card-wrapper {
+  min-width: 100%;
+  flex-shrink: 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 
@@ -299,6 +446,18 @@ onUnmounted(() => {
   justify-content: center;
   transition: background-color 0.3s ease;
   z-index: 10;
+
+  @media (max-width: 768px) {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  @media (max-width: 480px) {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
 }
 
 .carousel-nav:hover {
@@ -307,10 +466,26 @@ onUnmounted(() => {
 
 .carousel-prev {
   left: 10px;
+
+  @media (max-width: 768px) {
+    left: 5px;
+  }
+
+  @media (max-width: 480px) {
+    left: 2px;
+  }
 }
 
 .carousel-next {
   right: 10px;
+
+  @media (max-width: 768px) {
+    right: 5px;
+  }
+
+  @media (max-width: 480px) {
+    right: 2px;
+  }
 }
 
 .carousel-indicators {
@@ -318,6 +493,16 @@ onUnmounted(() => {
   justify-content: center;
   gap: 8px;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    margin-top: 15px;
+    gap: 6px;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 10px;
+    gap: 4px;
+  }
 }
 
 .carousel-indicator {
@@ -328,6 +513,16 @@ onUnmounted(() => {
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    width: 10px;
+    height: 10px;
+  }
+
+  @media (max-width: 480px) {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 .carousel-indicator:hover {
@@ -336,31 +531,5 @@ onUnmounted(() => {
 
 .carousel-indicator.active {
   background: $mvsd-colors-primary;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .carousel-nav {
-    width: 35px;
-    height: 35px;
-    font-size: 20px;
-  }
-
-  .carousel-prev {
-    left: 5px;
-  }
-
-  .carousel-next {
-    right: 5px;
-  }
-
-  .carousel-indicators {
-    margin-top: 15px;
-  }
-
-  .carousel-indicator {
-    width: 10px;
-    height: 10px;
-  }
 }
 </style>

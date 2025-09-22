@@ -82,38 +82,40 @@
   <section id="titles-awards">
     <h2 class="fancy-underline-2">Titles and Awards</h2>
     <br /><br />
-    <div style="text-align: center;"><img style=" width: 100%;" src="../assets/apply/apply-5.jpg" alt="dog"></img></div>
+    <div class="awards-image-container">
+      <img src="../assets/apply/apply-5.jpg" alt="Titles and Awards">
+    </div>
     <div class="mvsd-section__container">
       <div class="section-content">
         <h3>Royal Court Awards</h3>
         <hr>
-        <h4>Miss Vietnam of San Diego (Queen) : $2,000</h4>
+        <h4>Miss Vietnam of San Diego (Queen) : $2,000</h4>
         <p>Miss Vietnam of San Diego is highest award presented by Miss Vietnam San Diego. This award is given to the
           contestant that fully embodies the beauty, intelligence, and cultural heritage of the Vietnamese community.
           More than just a beautiful face, Miss Vietnam of San Diego is a symbol of empowerment for the Vietnamese women
-          of San Diego. </p>
-        <h4>First Princess : $1,500</h4>
+          of San Diego. </p>
+        <h4>First Princess : $1,500</h4>
         <p>First Princess is the runner-up to the Miss Vietnam of San Diego. First Princess is a pillar of support for
           the crowned queen and carries the spirit of unity to the Royal Court. In times when the queen may be
           unavailable, our First Princess steps in with grace and poise.</p>
 
-        <h4>Second Princess : $1,000</h4>
+        <h4>Second Princess : $1,000</h4>
         <p>Second Princess, with their outstanding grace, charisma, and dedication to the Vietnamese community, are
-          amazing role models recognized for their goodwill in the community. </p>
+          amazing role models recognized for their goodwill in the community. </p>
       </div>
-      <div style="flex: 50%;">
+      <div class="section-content special-awards">
         <h3>Specials Awards</h3>
         <hr>
-        <h4>Miss Community Service : $100</h4>
+        <h4>Miss Community Service : $100</h4>
         <p>Awarded to the contestant with the most hours of community service throughout the pageant process, Miss
           Community Service shows that true beauty lies in kindness and selflessness.</p>
-        <h4>Miss Congeniality : $100</h4>
+        <h4>Miss Congeniality : $100</h4>
         <p>Awarded to the contestant with the most votes from fellow contestants for their uplifting and genuine
           friendship, Miss Congeniality radiates kindness and positivity.</p>
 
-        <h4>Miss People’s Choice : $100</h4>
-        <p>Awarded to the contestant with the most votes on Facebook and Instagram, Miss People’s Choice’s charisma and
-          heart never fails to captivate and represent our fantastic audience. </p>
+        <h4>Miss People's Choice : $100</h4>
+        <p>Awarded to the contestant with the most votes on Facebook and Instagram, Miss People's Choice's charisma and
+          heart never fails to captivate and represent our fantastic audience. </p>
       </div>
     </div>
   </section>
@@ -183,7 +185,6 @@ hr {
 .mvsd-section__container {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
 
   .img-left,
   .img-right {
@@ -193,11 +194,34 @@ hr {
   img {
     width: 100%;
   }
+
+  // Mobile responsive: stack images vertically
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .img-left,
+    .img-right {
+      flex: none;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .section-content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 }
 
 
 .img-left {
   flex: 50%;
+
+  @media (max-width: 768px) {
+    flex: none;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 .img-left img {
@@ -209,6 +233,13 @@ hr {
   padding-left: 2rem;
   padding-right: 2rem;
   flex: 50%;
+
+  @media (max-width: 768px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: none;
+    width: 100%;
+  }
 }
 
 
@@ -271,6 +302,10 @@ hr {
   justify-content: center;
 }
 
+section {
+  margin-top: 50px;
+}
+
 .hr-wrapper hr {
   border: none;
   border-top: 1.5px solid $mvsd-colors-primary;
@@ -320,5 +355,41 @@ hr {
 
 .sponsor-list {
   background-color: #faf9f8;
+}
+
+/* Awards section responsive styles */
+#titles-awards {
+  padding: 2rem 1rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.awards-image-container {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 1.5rem;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.special-awards {
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
 }
 </style>
