@@ -2,7 +2,9 @@
   "applicationForm": {
     "url": "https://docs.google.com/forms/d/e/1FAIpQLScue6uIHbtqY2TjxG7OQkjA_AqdQaZxJnOlCLLOLfkfNGkdNw/viewform",
     "text": "2026 Application Form",
-    "description": "Official Miss Vietnam San Diego 2026 Application Form"
+    "description": "Official Miss Vietnam San Diego 2026 Application Form",
+    "deadline": "2025-10-07T23:59:59",
+    "deadlineText": "Application deadline: October 7, 2025 at midnight"
   },
   "socialMedia": {
     "instagram": "https://www.instagram.com/missvietnamsandiego/",

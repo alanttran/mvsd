@@ -9,8 +9,9 @@
       <h1>Miss Vietnam of San Diego</h1>
     </div>
     <div>
-      <a :href="applicationForm.url" target="_blank" class="mvsd-button--primary landing-button">2026 Applications are
+      <a v-if="!isApplicationDeadlinePassed" :href="applicationForm.url" target="_blank" class="mvsd-button--primary landing-button">2026 Applications are
         now open!</a>
+      <p v-if="!isApplicationDeadlinePassed" class="deadline-text">{{ applicationForm.deadlineText }}</p>
     </div>
   </div>
 
@@ -126,6 +127,7 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import externalLinks from '../data/external-links.json'
 import projectSangImage from '../assets/projects/2025-project-sang.jpg'
@@ -135,6 +137,13 @@ import { useSEO } from '../composables/useSEO.js'
 
 // Get application form data
 const applicationForm = externalLinks.applicationForm
+
+// Check if application deadline has passed
+const isApplicationDeadlinePassed = computed(() => {
+  const deadline = new Date(applicationForm.deadline)
+  const now = new Date()
+  return now > deadline
+})
 
 // SEO data
 const { generateEventSchema } = useSEO()
@@ -316,6 +325,20 @@ const structuredData = generateEventSchema({
   align-self: flex-start;
   font-size: 18px;
   padding: 12px 24px;
+}
+
+.deadline-text {
+  margin-top: 10px;
+  margin-left: 120px;
+  color: #FAF9F8;
+  font-size: 14px;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 768px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 

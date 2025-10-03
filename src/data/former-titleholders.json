@@ -105,7 +105,7 @@
   },
   {
     "year": "2019",
-    "image": "royal-courts/2019/court-2019.jpg",
+    "image": "royal-courts/2019/court-2019-2.jpg",
     "alt": "Royal Court 2019",
     "titleholders": [
       {
@@ -171,7 +171,7 @@
   },
   {
     "year": "2017",
-    "image": "royal-courts/2017/court-2017.jpg",
+    "image": "royal-courts/2017/court-2017-2.jpg",
     "alt": "Royal Court 2017",
     "titleholders": [
       {
@@ -235,6 +235,10 @@
       },
       {
         "title": "Miss Evening Gown",
+        "name": "Cynthia Le"
+      },
+      {
+        "title": "Miss Community Service",
         "name": "Julie Nguyen"
       },
       {
@@ -492,6 +496,33 @@
       {
         "title": "Fourth Princess",
         "name": "Lisa Phu Sa Dang"
+      }
+    ]
+  },
+  {
+    "year": "2006",
+    "image": "royal-courts/2006/court-2006.jpg",
+    "alt": "Royal Court 2006",
+    "titleholders": [
+      {
+        "title": "Miss Vietnam of San Diego 2006",
+        "name": "Cynthia Chau Truong"
+      },
+      {
+        "title": "First Princess + Miss Congeniality",
+        "name": "Connie Khanh Le"
+      },
+      {
+        "title": "Second Princess",
+        "name": "--"
+      },
+      {
+        "title": "Third Princess",
+        "name": "Tracy Truong"
+      },
+      {
+        "title": "Fourth Princess",
+        "name": "Quynh Nga Vo"
       }
     ]
   }

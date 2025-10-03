@@ -15,7 +15,8 @@
       <h2 class="fancy-underline">Join the Sisterhood</h2>
       <p>Ready to show us if you're the future Miss Vietnam San Diego? Apply now!
       </p>
-      <a :href="applicationForm.url" target="_blank" class="mvsd-button--primary">{{ applicationForm.text }}</a>
+      <a v-if="!isApplicationDeadlinePassed" :href="applicationForm.url" target="_blank" class="mvsd-button--primary">{{ applicationForm.text }}</a>
+      <p v-if="!isApplicationDeadlinePassed" class="deadline-text">{{ applicationForm.deadlineText }}</p>
     </div>
   </section>
 
@@ -149,6 +150,13 @@ export default {
       seoKeywords: 'Apply Miss Vietnam San Diego, 2026 applications, Vietnamese American pageant, sisterhood, community leadership, San Diego pageant',
       seoImage: '/src/assets/royal-courts/2024/contestants-apply-banner.jpg',
       seoUrl: 'https://missvietnamsandiego.com/apply'
+    }
+  },
+  computed: {
+    isApplicationDeadlinePassed() {
+      const deadline = new Date(this.applicationForm.deadline)
+      const now = new Date()
+      return now > deadline
     }
   }
 }
@@ -401,5 +409,13 @@ section {
   @media (max-width: 768px) {
     margin-top: 2rem;
   }
+}
+
+.deadline-text {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 </style>
