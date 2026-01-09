@@ -6,8 +6,8 @@
   <PageBanner title="Program Details and Application" background-image="royal-courts/2024/contestants-apply-banner.jpg"
     text-position="bottom" />
 
-  <!-- about  -->
-  <section class="mvsd-section__container">
+  <!-- Join the Sisterhood section - Hidden when applications are closed -->
+  <!-- <section class="mvsd-section__container">
     <div class="img-left">
       <img src="../assets/apply/apply-1.jpg" alt="dog">
     </div>
@@ -18,7 +18,7 @@
       <a v-if="!isApplicationDeadlinePassed" :href="applicationForm.url" target="_blank" class="mvsd-button--primary">{{ applicationForm.text }}</a>
       <p v-if="!isApplicationDeadlinePassed" class="deadline-text">{{ applicationForm.deadlineText }}</p>
     </div>
-  </section>
+  </section> -->
 
   <section class="mvsd-section__container" id="why-mvsd">
     <div class="section-content">

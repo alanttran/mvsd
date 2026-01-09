@@ -74,7 +74,7 @@ const navigationLinks = [
   { name: 'Competition', path: '/competition', active: true },
   { name: 'Impact', path: '/impact', active: true },
   { name: 'Reign', path: '/reign', active: true },
-  { name: 'Apply Now!', path: '/apply', active: true }
+  { name: 'Program', path: '/apply', active: true }
 ]
 
 // Filter active links for navbar
@@ -123,9 +123,9 @@ const footerSections = [
     active: navigationLinks.find(link => link.name === 'Competition')?.active || false
   },
   {
-    title: 'Apply Now',
+    title: 'Program',
     links: getPageHeadings('/apply'),
-    active: navigationLinks.find(link => link.name === 'Apply Now!')?.active || false
+    active: navigationLinks.find(link => link.name === 'Program')?.active || false
   }
 ]
 
@@ -276,10 +276,10 @@ const contactSection = activeFooterSections.find(section => section.title === 'C
           </div>
         </div>
 
-        <!-- Apply Now section (matches nav order: Apply Now!) -->
-        <div v-for="section in regularFooterSections.filter(s => s.title === 'Apply Now')" :key="section.title"
+        <!-- Program section (matches nav order: Program) -->
+        <div v-for="section in regularFooterSections.filter(s => s.title === 'Program')" :key="section.title"
           class="foot-col">
-          <h4>Join Our Program</h4>
+          <h4>Program Information</h4>
           <ul>
             <li v-for="link in section.links" :key="link.text">
               <RouterLink v-if="link.href.startsWith('/')" :to="link.href">{{ link.text }}</RouterLink>
